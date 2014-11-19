@@ -1,2 +1,2 @@
 Emily Connors (czar)
-Margaret Huang
+Margaret M. Huang 
