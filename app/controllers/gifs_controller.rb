@@ -23,7 +23,7 @@ class GifsController < ApplicationController
 
 #Post route for the new controller. 
 #Will also create a tag and push the tag to the join table
-#**NEEDS / HAS VIEW
+
 	def create
 		@gif = Gif.create(gif_params)
 		@tag = Tag.create(tag_params)
@@ -38,7 +38,16 @@ class GifsController < ApplicationController
 		@gif = Gif.find(params[:id])
 		if @gif.destroy
 			redirect_to 
+		end
 	end
+
+	
+	#removing individual tag from gif
+
+	def remove_tag
+	end
+
+	
 
 	private 
 

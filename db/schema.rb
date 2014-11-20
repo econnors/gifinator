@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119171115) do
+ActiveRecord::Schema.define(version: 20141120192024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 20141119171115) do
     t.integer "tag_id", null: false
   end
 
+  create_table "profile_pictures", force: true do |t|
+    t.text     "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
   create_table "tags", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -45,7 +52,7 @@ ActiveRecord::Schema.define(version: 20141119171115) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.text     "bio"
-    t.text     "profile_picture"
+    t.integer  "profile_picture_id"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"

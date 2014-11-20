@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 validates :username, presence: true, uniqueness: true
-validates :profile_pic, presence: true
+validates :profile_picture_id, presence: true
 validates :bio, presence: true
 has_secure_password
 
