@@ -5,6 +5,7 @@ class GifsController < ApplicationController
 #**NEEDS / HAS VIEW
 	def index
 		@gifs = Gif.all
+	
 	end
 
 #again another route where thinking about it Im not sure if we need this. 

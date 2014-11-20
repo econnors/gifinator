@@ -970,3 +970,371 @@ NoMethodError (undefined method `profile_pic_id' for #<User:0x007fe55c36bc50>):
   Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
   Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
 >>>>>>> ae354c27c335e8cd452d3705dd44d61b2578b22a
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:18:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (16.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 181ms (Views: 117.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:18:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:18:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:18:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:18:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:18:10 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-20 16:24:28 -0500
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:24:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:28 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:24:41 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:41 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:24:41 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:24:53 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:54 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:24:54 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:24:56 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:24:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:24:56 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:25:29 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:25:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:29 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:25:30 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:25:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:25:30 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:25:52 -0500
+Processing by GifsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant GifsController::Ziggeo):
+  app/controllers/gifs_controller.rb:7:in `index'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.4ms)
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:26:04 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:26:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:26:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:26:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:26:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:26:04 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:26:59 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:26:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:26:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:26:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:26:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:27:00 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:35:06 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Ziggeo):
+    1: <p> this is where a gif shows up </p>
+    2: 
+    3: <ziggeo></ziggeo>
+    4: <%ziggeo = Ziggeo.new%>
+    5: <%ziggeo.videos().index().each do |video|%>
+    6:   ...
+    7: <%end%>
+  app/views/gifs/index.html.erb:4:in `_app_views_gifs_index_html_erb___905792416622872152_70198018151540'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.2ms)
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:35:14 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 151ms (Views: 150.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:35:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:15 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:35:16 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:35:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:16 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:35:16 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:17 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 16:35:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 16:35:17 -0500
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:44:13 -0500
+Processing by GifsController#index as HTML
+Completed 500 Internal Server Error in 10ms
+
+NameError (uninitialized constant GifsController::Ziggeo):
+  app/controllers/gifs_controller.rb:8:in `index'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:44:51 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <p> this is where a gif shows up </p>
+    2: 
+    3: <ziggeo ziggeo-video="<%= @ziggeo['token']%> "></ziggeo>
+  app/views/gifs/index.html.erb:3:in `_app_views_gifs_index_html_erb___905792416622872152_70198019134300'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:45:41 -0500
+Processing by GifsController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+NameError (uninitialized constant GifsController::Ziggeo):
+  app/controllers/gifs_controller.rb:8:in `index'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.8ms)
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 16:46:32 -0500
+Processing by GifsController#index as HTML
+  Rendered gifs/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <p> this is where a gif shows up </p>
+    2: 
+    3: <ziggeo ziggeo-video="<%= @ziggeo[:token]%> "></ziggeo>
+  app/views/gifs/index.html.erb:3:in `_app_views_gifs_index_html_erb___905792416622872152_70197981191920'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.0ms)
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-20 17:02:12 -0500
+Processing by GifsController#index as HTML
+  [1m[35mGif Load (137.9ms)[0m  SELECT "gifs".* FROM "gifs"
+  Rendered gifs/index.html.erb within layouts/application (159.7ms)
+Completed 500 Internal Server Error in 163ms
+
+ActionView::Template::Error (undefined local variable or method `ziggeo' for #<#<Class:0x007fb07b77a6b8>:0x007fb07bab3118>):
+    1: <p> this is where a gif shows up </p>
+    2: 
+    3: <ziggeo ziggeo-video="<%= ziggeo[:token]%> "></ziggeo>
+  app/views/gifs/index.html.erb:3:in `_app_views_gifs_index_html_erb___905792416622872152_70197982878060'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.9ms)
