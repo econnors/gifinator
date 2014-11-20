@@ -711,3 +711,109 @@ NoMethodError (undefined method `profile_pic' for #<User:0x007fa5d3e70ec0>):
   Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
   Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToProfilePicture (20141120192024)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (37.6ms)[0m  [1mALTER TABLE "profile_pictures" ADD COLUMN "name" character varying(255)[0m
+  [1m[35mSQL (16.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141120192024"]]
+  [1m[36m (17.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (16.0ms)[0m  DELETE FROM "profile_pictures"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-20 20:13:17.263350"], ["image_url", "http://www.merrickpubliclibrary.org/images/Dipiodocus.gif"], ["name", "Dipiodocus"], ["updated_at", "2014-11-20 20:13:17.263350"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-20 20:13:17.286450"], ["image_url", "http://www.sciencekids.co.nz/images/pictures/dinosaurs/triceratops/triceratopscartoon.jpg"], ["name", "Cute Triceratops"], ["updated_at", "2014-11-20 20:13:17.286450"]]
+  [1m[35m (15.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-20 20:13:17.304535"], ["image_url", "http://images.clipartpanda.com/cute-dinosaur-9f906fb381d0224fcba70da266293035.png"], ["name", "Cute Dino"], ["updated_at", "2014-11-20 20:13:17.304535"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-20 20:13:17.307830"], ["image_url", "http://cdn10.mixrmedia.com/wp-uploads/wirebot/blog/2011/08/widget_ax823frnpayi3_hc2npkbv.jpg"], ["name", "Kirby"], ["updated_at", "2014-11-20 20:13:17.307830"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-20 20:13:17.310561"], ["image_url", "http://fc04.deviantart.net/fs70/f/2011/110/7/c/7ca5238ef52839011a05e1e67299e748-d3egfi6.jpg"], ["name", "Link"], ["updated_at", "2014-11-20 20:13:17.310561"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-20 20:13:17.313087"], ["image_url", "http://hottopic.scene7.com/is/image/HotTopic/10018960_hi?wid=1360"], ["name", "Unstoppable T-Rex"], ["updated_at", "2014-11-20 20:13:17.313087"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-20 20:13:17.315424"], ["image_url", "http://imgs.tuts.dragoart.com/how-to-draw-a-sloth-for-kids_1_000000012109_5.gif"], ["name", "Sloth"], ["updated_at", "2014-11-20 20:13:17.315424"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-20 20:13:17.317801"], ["image_url", "http://www.lineboil.com/images/slth02.jpg"], ["name", "Sloth II"], ["updated_at", "2014-11-20 20:13:17.317801"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-20 20:13:17.320482"], ["image_url", "http://images4.fanpop.com/image/photos/23000000/Cute-Ariel-disney-princess-23012684-211-239.jpg"], ["name", "Ariel"], ["updated_at", "2014-11-20 20:13:17.320482"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-20 20:13:17.322717"], ["image_url", "http://img3.wikia.nocookie.net/__cb20081013140955/ghostbusters/images/1/11/Bill_Murray.jpeg"], ["name", "Bill Murray"], ["updated_at", "2014-11-20 20:13:17.322717"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-20 20:13:17.324834"], ["image_url", "http://taro-kun.com/blog/wp-content/uploads/2011/09/8bit-Nick-Cage.jpg"], ["name", "Nick Cage"], ["updated_at", "2014-11-20 20:13:17.324834"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-20 20:13:17.326871"], ["image_url", "http://kleenradio.com/wp-content/uploads/2013/12/happy-cat_2818143.jpg"], ["name", "Happy Cat"], ["updated_at", "2014-11-20 20:13:17.326871"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-20 15:14:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (0.7ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/new.html.erb within layouts/application (68.9ms)
+Completed 200 OK in 871ms (Views: 844.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 15:14:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 15:14:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 15:14:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 15:14:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-20 15:14:13 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-20 15:14:39 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oafFYTKzhOsku3tVQLa8jk7r4Um5KDVaNA4HRMSygqg=", "user"=>{"username"=>"Hungergrl", "bio"=>"meoiwgh", "profile_picture_id"=>"16", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Join GifMe"}
+Unpermitted parameters: password_confirmation
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (48.9ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'Hungergrl' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 275ms
+
+NoMethodError (undefined method `profile_pic' for #<User:0x007fe55a4191b8>):
+  app/controllers/users_controller.rb:26:in `create'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-20 15:15:46 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oafFYTKzhOsku3tVQLa8jk7r4Um5KDVaNA4HRMSygqg=", "user"=>{"username"=>"Hungergrl", "bio"=>"meoiwgh", "profile_picture_id"=>"16", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Join GifMe"}
+Unpermitted parameters: password_confirmation
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'Hungergrl' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 106ms
+
+NoMethodError (undefined method `profile_pic_id' for #<User:0x007fe55c36bc50>):
+  app/controllers/users_controller.rb:26:in `create'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
