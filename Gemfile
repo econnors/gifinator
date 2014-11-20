@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,3 +42,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
+  gem 'shoulda-matchers', require: false
+end
