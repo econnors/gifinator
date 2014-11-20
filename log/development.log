@@ -27,3 +27,78 @@ Migrating to CreateJoinTableGifTag (20141119171115)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119171115"]]
   [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (17.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (33.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20141119170141)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (37.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "bio" text, "profile_picture_id" integer, "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (14.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119170141"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGifs (20141119170146)
+  [1m[35m (16.2ms)[0m  BEGIN
+  [1m[36m (17.7ms)[0m  [1mCREATE TABLE "gifs" ("id" serial primary key, "title" character varying(255), "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119170146"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTags (20141119170151)
+  [1m[35m (15.6ms)[0m  BEGIN
+  [1m[36m (16.5ms)[0m  [1mCREATE TABLE "tags" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119170151"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateComments (20141119170158)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "comment" text, "user_id" integer, "gif_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119170158"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateJoinTableGifTag (20141119171115)
+  [1m[35m (15.8ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "gifs_tags" ("gif_id" integer NOT NULL, "tag_id" integer NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119171115"]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfilePictures (20141120153919)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "profile_pictures" ("id" serial primary key, "image_url" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141120153919"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-20 16:33:26.382135"], ["image_url", "http://www.merrickpubliclibrary.org/images/Dipiodocus.gif"], ["updated_at", "2014-11-20 16:33:26.382135"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-20 16:33:26.415355"], ["image_url", "https://www.google.com/search?q=cute+dinosaur&es_sm=91&tbm=isch&tbo=u&source=univ&sa=X&ei=JxJuVK78OszdsASxw4HABA&ved=0CB8QsAQ&biw=1160&bih=581#facrc=_&imgdii=_&imgrc=X8HJMhIfYfDkHM%253A%3BE7iL8y9TNVyDRM%3Bhttp%253A%252F%252Fwww.sciencekids.co.nz%252Fimages%252Fpictures%252Fdinosaurs%252Ftriceratops%252Ftriceratopscartoon.jpg%3Bhttp%253A%252F%252Fwww.sciencekids.co.nz%252Fpictures%252Fdinosaurs%252Ftriceratops%252Ftriceratopscartoon.html%3B552%3B597"], ["updated_at", "2014-11-20 16:33:26.415355"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-20 16:33:26.418644"], ["image_url", "http://images.clipartpanda.com/cute-dinosaur-9f906fb381d0224fcba70da266293035.png"], ["updated_at", "2014-11-20 16:33:26.418644"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-20 16:33:26.421939"], ["image_url", "http://cdn10.mixrmedia.com/wp-uploads/wirebot/blog/2011/08/widget_ax823frnpayi3_hc2npkbv.jpg"], ["updated_at", "2014-11-20 16:33:26.421939"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-20 16:33:26.425199"], ["image_url", "http://fc04.deviantart.net/fs70/f/2011/110/7/c/7ca5238ef52839011a05e1e67299e748-d3egfi6.jpg"], ["updated_at", "2014-11-20 16:33:26.425199"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-20 16:33:26.428269"], ["image_url", "http://hottopic.scene7.com/is/image/HotTopic/10018960_hi?wid=1360"], ["updated_at", "2014-11-20 16:33:26.428269"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-20 16:33:26.431305"], ["image_url", "http://imgs.tuts.dragoart.com/how-to-draw-a-sloth-for-kids_1_000000012109_5.gif"], ["updated_at", "2014-11-20 16:33:26.431305"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-20 16:33:26.434078"], ["image_url", "http://www.lineboil.com/images/slth02.jpg"], ["updated_at", "2014-11-20 16:33:26.434078"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-20 16:33:26.437030"], ["image_url", "http://images4.fanpop.com/image/photos/23000000/Cute-Ariel-disney-princess-23012684-211-239.jpg"], ["updated_at", "2014-11-20 16:33:26.437030"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-20 16:33:26.440108"], ["image_url", "http://img3.wikia.nocookie.net/__cb20081013140955/ghostbusters/images/1/11/Bill_Murray.jpeg"], ["updated_at", "2014-11-20 16:33:26.440108"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-20 16:33:26.443056"], ["image_url", "http://taro-kun.com/blog/wp-content/uploads/2011/09/8bit-Nick-Cage.jpg"], ["updated_at", "2014-11-20 16:33:26.443056"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "profile_pictures" ("created_at", "image_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-20 16:33:26.446139"], ["image_url", "http://kleenradio.com/wp-content/uploads/2013/12/happy-cat_2818143.jpg"], ["updated_at", "2014-11-20 16:33:26.446139"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
