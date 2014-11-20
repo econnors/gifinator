@@ -17,9 +17,9 @@ let(:emily) {User.new(username: 'econnors',
   	expect(new_user).to have(1).errors_on(:username)
   end
 
-  it "is invalid without a profile_pic" do
-  	new_user = User.new(profile_pic: nil)
-  	expect(new_user).to have(1).errors_on(:profile_pic)
+  it "is invalid without a profile_picture_id" do
+  	new_user = User.new(profile_picture_id: nil)
+  	expect(new_user).to have(1).errors_on(:profile_picture_id)
   end
 
   it "is invalid without a bio" do
@@ -47,7 +47,7 @@ let(:emily) {User.new(username: 'econnors',
   	expect(mck).to have(1).errors_on(:username)
   end
 
-  it { is_expected.to have many :gifs}
-  it { is_expected.to have many :comments}
+  it { is_expected.to have_many :gifs}
+  it { is_expected.to have_many :comments}
 
 end
