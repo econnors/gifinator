@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119171115) do
+ActiveRecord::Schema.define(version: 20141119170158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,11 +29,6 @@ ActiveRecord::Schema.define(version: 20141119171115) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "gifs_tags", id: false, force: true do |t|
-    t.integer "gif_id", null: false
-    t.integer "tag_id", null: false
   end
 
   create_table "tags", force: true do |t|
