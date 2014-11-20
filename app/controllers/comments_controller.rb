@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
 	end
 
 	#Post route for the new route in this controller
+	# gif index
 	def create
 		@comment = Comment.create(comment_params)
 		redirect_to gifs_path
