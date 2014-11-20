@@ -1,0 +1,21 @@
+<div class="user_form">
+<%= form_for @user do |f| %>
+
+<%= f.label :username %><br>
+<%= f.text_field :username %><br>
+
+<%= f.label :bio %><br>
+<%= f.text_area :bio %><br>
+
+<%= label_tag "Profile Picture" %>
+<br><%= collection_select(:user, :profile_picture_id, ProfilePicture.all, :id, :name, prompt: true) %><br>
+
+<%= f.label :password %><br>
+<%= f.password_field :password %><br>
+
+<%= f.label :password_confirmation %><br>
+<%= f.password_field :password_confirmation %><br>
+
+<br><%= f.submit "Join GifMe" %><br>
+<% end %>
+</div>
