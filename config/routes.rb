@@ -11,4 +11,8 @@ end
 
 resources :tags, only: [:show, :edit]
 resources :comments, only: [:new, :edit, :destroy, :create]
+
+ get 'sessions/new' => 'sessions#new', as: 'login'
+  post 'sessions'    => 'sessions#create'
+  delete 'sessions'  => 'sessions#destroy'
 end

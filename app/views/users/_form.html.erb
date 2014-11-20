@@ -1,0 +1,8 @@
+<%= f.label :username %><br>
+<%= f.text_field :username %><br>
+
+<%= f.label :bio %><br>
+<%= f.text_area :bio %><br>
+
+<%= label_tag "Profile Picture" %>
+<br><%= collection_select(:user, :profile_picture_id, ProfilePicture.all, :id, :name, prompt: true) %><br>
