@@ -1,3 +1,0 @@
-[econnors]
-aws_access_key_id = AKIAIRJYUFQDJ3TYS5DA
-aws_secret_access_key = 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
