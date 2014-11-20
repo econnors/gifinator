@@ -1,15 +1,12 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.user_form select option[value="1"]   { background-image: url('http://www.merrickpubliclibrary.org/images/Dipiodocus.gif');   }
+.user_form select option[value="2"] { background-image: url('https://www.google.com/search?q=cute+dinosaur&es_sm=91&tbm=isch&tbo=u&source=univ&sa=X&ei=JxJuVK78OszdsASxw4HABA&ved=0CB8QsAQ&biw=1160&bih=581#facrc=_&imgdii=_&imgrc=X8HJMhIfYfDkHM%253A%3BE7iL8y9TNVyDRM%3Bhttp%253A%252F%252Fwww.sciencekids.co.nz%252Fimages%252Fpictures%252Fdinosaurs%252Ftriceratops%252Ftriceratopscartoon.jpg%3Bhttp%253A%252F%252Fwww.sciencekids.co.nz%252Fpictures%252Fdinosaurs%252Ftriceratops%252Ftriceratopscartoon.html%3B552%3B597'); }
+.user_form select option[value="3"] { background-image: url(); }
+.user_form select option[value="4"]   { background-image: url();   }
+.user_form select option[value="5"] { background-image: url(); }
+.user_form select option[value="6"] { background-image: url(); }
+.user_form select option[value="7"]   { background-image: url();   }
+.user_form select option[value="8"] { background-image: url(); }
+.user_form select option[value="9"] { background-image: url(); }
+.user_form select option[value="10"]   { background-image: url();   }
+.user_form select option[value="11"] { background-image: url(); }
+.user_form select option[value="12"] { background-image: url(); }

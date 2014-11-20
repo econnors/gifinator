@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 			redirect_to user_path(@user) #session[:current_user_id]
 		else 
 			render :new
+		end
 	end
 
 #accesable only through your indiviudal profile page / ability to delete your
@@ -53,13 +54,14 @@ class UsersController < ApplicationController
 			redirect_to gifs_path
 		else
 			redirect_to user_path(@user)
+		end
 	end
 
 	private
 
 #params for the new user form. 
 	def user_params
-		params.require(:user).permit(:username, :profile_pic, :password_digest)
+		params.require(:user).permit(:username, :profile_picture_id, :bio, :password)
 	end
 
 end

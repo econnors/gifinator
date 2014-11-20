@@ -38,6 +38,7 @@ class GifsController < ApplicationController
 		@gif = Gif.find(params[:id])
 		if @gif.destroy
 			redirect_to 
+		end
 	end
 
 	
