@@ -10,6 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <header>
+	<h1>Gifinator</h1>
 <% if session[:current_user_id] %>
 Welcome to GifMe, <%= User.find(session[:current_user_id]).username %>
 <%= link_to "Log_out", sessions_path, method: :delete %>
