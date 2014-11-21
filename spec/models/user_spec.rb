@@ -33,18 +33,19 @@ let(:emily) {User.new(username: 'econnors',
   											bio: 'im da bes, swag swag swag',
   											password: 'password2',
   											password_confirmation: 'password3')
-  	error_included = errors.include?("doesn't match password")
+    errors = new_user.errors_on(:password_confirmation)
+  	error_included = errors.include?("doesn't match Password")
   	expect(error_included).to eq(true)
   end
 
   it "is invalid without a unique username" do
   	emily.save!
-  	maggie = User.new(username: 'will',
+  	maggie = User.new(username: 'econnors',
   										profile_picture_id: 'http://lorempixel.com/200',
   										bio: 'im da bes, swag swag swag',
   										password: 'password3',
   										password_confirmation: 'password3')
-  	expect(mck).to have(1).errors_on(:username)
+  	expect(maggie).to have(1).errors_on(:username)
   end
 
   it { is_expected.to have_many :gifs}
