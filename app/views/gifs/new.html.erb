@@ -1,1 +1,4 @@
-<h1>hello new</h1>
+<%= form_tag(gifs_path, method: :post) do  %>
+<ziggeo ziggeo-input_bind='videotoken' type='hidden'></ziggeo><br>
+<br><%= submit_tag "GifME" %>
+<% end %>
