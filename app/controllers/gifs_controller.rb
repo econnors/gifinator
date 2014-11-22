@@ -9,9 +9,7 @@ class GifsController < ApplicationController
 		@gifs = Gif.all
 	end
 
-	#again another route where thinking about it Im not sure if we need this.
-	#The community board and the indiidual profile pages should be enough
-	#Can discuss and remove if need be#**NEEDS / HAS VIEW
+	#Will have comments option on this page#**NEEDS / HAS VIEW
 	def show
 		@gif = Gif.find(params[:id])
 	end
@@ -30,7 +28,7 @@ class GifsController < ApplicationController
 		@gif = Gif.create(gif_params)
 		@tag = Tag.create(tag_params)
 		@gif.tags.push(@tag)
-		redirect_to gifs_path
+		redirect_to gif_path
 	end
 
 	#delete any specific gif. The gif may only be deleted by its user.
@@ -41,7 +39,7 @@ class GifsController < ApplicationController
 		if @gif.user != current_user
 			redirect_to user_path(session[:current_user_id])
 		else @gif.destroy
-			redirect_to
+			redirect_to user_path(session[:current_user_id])
 		end
 	end
 

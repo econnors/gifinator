@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
 	# gif index
 	def create
 		@comment = Comment.create(comment_params)
-		redirect_to gifs_path
+		redirect_to gif_path(@comment.gif_id)
 	end
 
 	#** NEEDS / HAS VIEW
@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
 			redirect_to user_path(session[:current_user_id])
 		else
 			if @comment.update(comment_params)
-				redirect_to gifs_path
+				redirect_to gif_path(@comment.gif_id)
 			else
 				render :edit
 			end

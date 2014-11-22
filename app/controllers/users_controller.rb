@@ -8,14 +8,14 @@ class UsersController < ApplicationController
 	end
 
 	#Show the users individual page. Will have the profile pic, all gifs
-	#a short bio **NEEDS / HAS VIEW
+	#a short bio HAS VIEW
 	def show
 		@user = User.find(params[:id])
-		@tags = Tags.all
+		
 	end
 
 	#Sign up page / Home landing page / should have a sign up form
-	#log in form if already signed up **NEEDS / HAS VIEW
+	#log in form if already signed up HAS VIEW
 
 	def new
 		@user = User.new
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 	end
 
 	#accesable only through your indiviudal profile page / ability to delete your
-	#own gifs and edit your profile info **NEEDS / HAS VIEW
+	#own gifs and edit your profile info  HAS VIEW
 	def edit
 		@user = User.find(params[:id])
 		if @user != current_user
