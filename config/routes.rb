@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root to: 'application#index'
+root to: 'users#new'
 
 resources :users 
 resources :gifs, only: [:create, :index, :show, :new, :destroy] do
