@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>GifinatorApp</title>
+  <link rel="style" href="/stylesheets/style.css">
   <link rel="stylesheet" href="//assets.ziggeo.com/css/ziggeo-betajs-player.min.css" />
   <script src="//assets.ziggeo.com/js/ziggeo-json2-betajs-player.min.js"></script>
   <script>ZiggeoApi.token = "90ed6ab82e70ec226efe2a5778945a62";</script>
@@ -10,26 +11,30 @@
   <%= csrf_meta_tags %>
 </head>
 <header>
-	<h1>Gifinator</h1>
-<% if session[:current_user_id] %>
-Welcome to GifMe, <%= User.find(session[:current_user_id]).username %>
-<%= link_to "Log_out", sessions_path, method: :delete %>
-	<% else %>
-	<%= form_tag(sessions_path) do%>
-	<%= label_tag :username %>
-	<%= text_field_tag :username %>
+	<div id="sitename">
+		<h1>Gifinator</h1>
+	</div>
+	<div id="login">
+		<% if session[:current_user_id] %> Welcome to GifMe, <%= User.find(session[:current_user_id]).username %>
+		<%= link_to "Log_out", sessions_path, method: :delete %>
+		<% else %>
+		<%= form_tag(sessions_path) do%>
+			<%= label_tag :username %>
+			<%= text_field_tag :username %>
 
-	<%= label_tag :password %>
-	<%= password_field_tag :password %>
+			<%= label_tag :password %>
+			<%= password_field_tag :password %>
 
-	<%= submit_tag "Login" %>
-	<% end %>
-<% end %>
-
+			<%= submit_tag "Login" %>
+			<% end %>
+		<% end %>
+	</div>
 </header>
+
 <body>
 
 <%= yield %>
 
 </body>
+
 </html>

@@ -1,12 +1,14 @@
+require 'aws-sdk'
+
 class Gif < ActiveRecord::Base
 
-validates :title, presence: true
+#validates :title, presence: true
 # validates :gif, presence: true
-validates :user_id, presence: true
+#validates :user_id, presence: true
 
-belongs_to :user
-has_many :comments, dependent: :destroy
-has_and_belongs_to_many :tags
+#belongs_to :user
+#has_many :comments, dependent: :destroy
+#has_and_belongs_to_many :tags
 
 #AWS S3 set credentials
 	def self.new_aws_request
@@ -24,7 +26,7 @@ has_and_belongs_to_many :tags
 	def self.get_gif
 		s3 = AWS::S3.new(:access_key_id => ENV['ACCESS_KEY_ID'], :secret_access_key => ENV['SECRET_ACCESS_KEY'])
 		bucket = s3.buckets[ENV['BUCKET']]
-		obj = bucket.objects['key']
+		object = bucket.objects['video.gif']
 		data = object.read 
 		return data
 	end
