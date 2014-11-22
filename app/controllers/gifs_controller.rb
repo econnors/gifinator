@@ -25,10 +25,9 @@ class GifsController < ApplicationController
 	#Will also create a tag and push the tag to the join table
 
 	def create
-		@gif = Gif.create(gif_params)
-		@tag = Tag.create(tag_params)
-		@gif.tags.push(@tag)
-		redirect_to gif_path
+		ziggeo = Ziggeo.new("90ed6ab82e70ec226efe2a5778945a62", "c2f718974008f07d567255e53b80a754", "292d3ac71c64213d968d24af93b23bdc")
+		data = ziggeo.videos.download_video(params[:videotoken])
+		#you should be able to put the data variable directly to s3 
 	end
 
 
