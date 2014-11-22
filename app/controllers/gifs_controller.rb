@@ -6,7 +6,8 @@ class GifsController < ApplicationController
 	#will have links to individaul users and links to tag displays
 	#**NEEDS / HAS VIEW
 	def index
-		@gifs = Gif.all
+		gif = Gif.get_gif
+		return gif
 	end
 
 	#Will have comments option on this page#**NEEDS / HAS VIEW
@@ -30,6 +31,15 @@ class GifsController < ApplicationController
 		@gif.tags.push(@tag)
 		redirect_to gif_path
 	end
+
+
+	def create_gif
+		s3 = User.new_aws_request
+		bucket = s3.buckets[ENV['BUCKET']]
+		bucket.acl = :public_read
+	end
+
+
 
 	#delete any specific gif. The gif may only be deleted by its user.
 	#I would like this to redirect to the page of the currently logged in user
