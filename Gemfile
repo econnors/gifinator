@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'pry-rails', group: :development
 gem 'MIAConverter', '~> 0.2.1'
+
 gem 'aws-sdk', '~> 1.59.0'
 gem "paperclip", '~> 4.2'
 

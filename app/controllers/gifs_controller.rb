@@ -6,8 +6,7 @@ class GifsController < ApplicationController
 	#will have links to individaul users and links to tag displays
 	#**NEEDS / HAS VIEW
 	def index
-		gif = Gif.get_gif
-		return gif
+		@gif = Gif.get_gif
 	end
 
 	#Will have comments option on this page#**NEEDS / HAS VIEW
