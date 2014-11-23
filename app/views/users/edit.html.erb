@@ -1,4 +1,7 @@
-<%= form_for @user do |f| %>
-<%= render partial: "form", locals: {f: f} %>
-<%= f.submit "Submit Changes" %>
-<% end %>
+<section class="edituserinfo">
+	<div id="ueditinfo">
+		<%= form_for @user do |f| %>
+		<%= render partial: "form", locals: {f: f} %>
+		<%= f.submit "Submit Changes" %>
+		<% end %>
+	</div>

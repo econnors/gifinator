@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>GifinatorApp</title>
-  <link rel="style" href="/stylesheets/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//assets.ziggeo.com/css/ziggeo-betajs-player.min.css" />
   <script src="//assets.ziggeo.com/js/ziggeo-json2-betajs-player.min.js"></script>
   <script>ZiggeoApi.token = "90ed6ab82e70ec226efe2a5778945a62";</script>
@@ -10,11 +10,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<header>
-	<div id="sitename">
+
+<section id="header">
+	<div class="sitename">
 		<h1>Gifinator</h1>
 	</div>
-	<div id="login">
+	<div class="login">
 		<% if session[:current_user_id] %> Welcome to GifMe, <%= User.find(session[:current_user_id]).username %>
 		<%= link_to "Log_out", sessions_path, method: :delete %>
 		<% else %>
@@ -29,7 +30,7 @@
 			<% end %>
 		<% end %>
 	</div>
-</header>
+</section>
 
 <body>
 
