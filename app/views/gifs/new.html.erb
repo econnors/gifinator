@@ -1,14 +1,15 @@
 
 
 
-
+<div style="margin-left: 350px;">
 <%= form_tag(gifs_path, method: :post) do  %>
-<%= form_for @gif do |f| %>
-<%= f.label :title %><br>
-<%= f.text_field :title %><br>
-<% end %>
 <ziggeo ziggeo-input_bind='videotoken' type='hidden'></ziggeo><br>
+</div>
+<div style="margin-left: 650px;">
 <br><%= submit_tag "GifME" %>
+</div>
 <% end %>
+
+
 
 
