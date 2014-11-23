@@ -1,18 +1,28 @@
-<%= @user.username %>
 
-<%= @user.bio %>
+<section class="useridpage">
+	<div id="userinfo">
+		<div id="uinfoname">
+			<%= @user.username %>
+		</div>
+		
+		<div id="uinfophoto">
+			<img src=" <%= ProfilePicture.find(@user.profile_picture_id).image_url %> " style="height: 300px;"/>
+		</div>
+		
+		<div id="uinfobio">
+			<%= @user.bio %>
+		</div>
 
-<img src=" <%= ProfilePicture.find(@user.profile_picture_id).image_url %> " style="height: 300px; width: 300px;"/>
+		<div id="uinfoedit">
+			<% if @user.id == session[:current_user_id]%>
+			<%= link_to "Edit Your Info", edit_user_path %> 
+			<% end %>
+		
 
+			<% if @user.id == session[:current_user_id]%>
+			<%= link_to "Delete My Account", user_path, method: :delete %>
+			<% end %>
+		</div>
 
-<% if @user.id == session[:current_user_id]%>
-<%= link_to "Edit Your Info", edit_user_path %> 
-<% end %>
-
-
-<% if @user.id == session[:current_user_id]%>
-<%= link_to "Delete My Account", user_path, method: :delete %> 
-<% end %>
-
-
-
+	</div>
+</section>

@@ -10,3 +10,147 @@
 .user_form select option[value="10"]   { background-image: url();   }
 .user_form select option[value="11"] { background-image: url(); }
 .user_form select option[value="12"] { background-image: url(); }
+
+
+
+/*css reset*/
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+/* css style */
+#header {
+	display: inline-block;
+	background-color: #FF7F50;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.sitename {
+	float: left;
+	width: 60%;
+	height: 20%;
+}
+
+.login {
+	float: left;
+	width: 30%;
+	height: 20%;
+}
+
+h1 {
+	font-size: 48px;
+	font-family: 'Rokkitt', serif;
+	color: white;
+}
+
+body {
+	background: url("http://static.vecteezy.com/system/resources/previews/000/030/053/original/Mario_Clouds_preview.jpg");
+	background-image: no-repeat 100%;
+	}
+
+.useridpage {
+	width: 100%;
+	text-align: center;
+}
+
+#userinfo {
+	background:rgba(255,255,255, 0.8);
+	width: 60%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom:20px;
+	border: 2px solid #FF7F50;
+	border-radius: 20px;
+}
+
+.uinfoname {
+	font-family: 'Rokkitt', serif;
+
+}
+
+.edituserinfo {
+	width: 100%;
+	text-align: center;
+}
+
+#ueditinfo {
+	padding: 10px;
+	background:rgba(255,255,255, 0.8);
+	width: 60%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom:20px;
+}
+
+#gifsindex {
+	width: 100%;
+	text-align: center;
+}
+
+#divsection {
+	width: 100%;
+	text-align:center;
+}
+#indexsinglegif {
+	float:left;
+	padding: 10px;
+	background:rgba(255,255,255, 0.8);
+	width: 30%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom:20px;
+}
+
+

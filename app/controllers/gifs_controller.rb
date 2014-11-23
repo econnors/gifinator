@@ -9,16 +9,29 @@ class GifsController < ApplicationController
 		@gif = Gif.get_gif
 	end
 
+
+	@gifs = []
+
+Gif.all.each do |gif|
+  s3_key = "#{gif.id}.gif"
+  obj = objects[s3_key]
+  data = obj.read
+  @gifs.push(data)
+end
+
+
+
 	#Will have comments option on this page#**NEEDS / HAS VIEW
 	def show
-		@gif = Gif.find(params[:id])
+		@gif = Gif.get_gif
+		#@gif = Gif.find(params[:id])
 	end
 
 	#create a new gif, will also have the tag create in this route.
 	##**NEEDS / HAS VIEW
 	def new
 		@gif = Gif.new
-		@tag = Tag.new
+		#@tag = Tag.new
 	end
 
 	#Post route for the new controller.
@@ -28,14 +41,14 @@ class GifsController < ApplicationController
 		ziggeo = Ziggeo.new("90ed6ab82e70ec226efe2a5778945a62", "c2f718974008f07d567255e53b80a754", "292d3ac71c64213d968d24af93b23bdc")
 		data = ziggeo.videos.download_video(params[:videotoken])
 		#you should be able to put the data variable directly to s3 
+		s3.buckets[gifmy].objects[data].write(:emily => emily)
 	end
 
-
-	def create_gif
-		s3 = User.new_aws_request
-		bucket = s3.buckets[ENV['BUCKET']]
-		bucket.acl = :public_read
-	end
+	#def create_gif
+	#	s3 = User.new_aws_request
+	#	bucket = s3.buckets[ENV['BUCKET']]
+	#	bucket.acl = :public_read
+	#end
 
 
 
