@@ -26,16 +26,16 @@ class GifsController < ApplicationController
 
 	def create
 		conv = HTTParty.get("https://api.cloudconvert.com/convert?apikey=EmVosLg9lZclfQxDH2P_YgIdUiWdEAesejdKrpnoRmyOtRJ1oIzUhzQ_1yBYRbw9taIxhlM7BE7byDZZx-xo9Q&input=download&download=inline&inputformat=mp4&outputformat=gif&file=https%3A%2F%2Fembed.ziggeo.com%2Fv1%2Fapplications%2F90ed6ab82e70ec226efe2a5778945a62%2Fvideos%2F#{params[:videotoken]}%2Fvideo.mp4&converteroptions[video_resolution]=480x320&converteroptions[video_fps]=5")
-		binding.pry
-		sleep(6)
+		sleep(3)
 		value = HTTParty.get("https://api.cloudconvert.com/processes?apikey=EmVosLg9lZclfQxDH2P_YgIdUiWdEAesejdKrpnoRmyOtRJ1oIzUhzQ_1yBYRbw9taIxhlM7BE7byDZZx-xo9Q")[-1].values[5]
 		url = value.gsub("process", "download")
-		gif = ("https:#{url}?inline")
+		gif_url = ("https:#{url}?inline")
 
-		Gif.create({
-			image_url: gif,
+		@gif = Gif.create({
+			image_url: gif_url,
 			user_id: session[:current_user_id]
 		})
+		redirect_to gif_path(@gif)
 	end
 
 	#delete any specific gif. The gif may only be deleted by its user.

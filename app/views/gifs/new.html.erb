@@ -1,14 +1,13 @@
+<section>
+	<div>
+		<%= form_tag(gifs_path, method: :post) do  %>
+		<ziggeo ziggeo-input_bind='videotoken' type='hidden'></ziggeo><br>
+	</div>
 
-
-
-<div style="margin-left: 350px;">
-<%= form_tag(gifs_path, method: :post) do  %>
-<ziggeo ziggeo-input_bind='videotoken' type='hidden'></ziggeo><br>
-</div>
-<div style="margin-left: 650px;">
-<br><%= submit_tag "GifME" %>
-</div>
-<% end %>
+	<div>
+		<br><%= submit_tag "GifME" %>
+		<% end %>
+	</div>
 
 
 
