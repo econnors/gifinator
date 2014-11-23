@@ -44,7 +44,7 @@ class GifsController < ApplicationController
 	#need to work out the redirect path
 	def destroy
 		@gif = Gif.find(params[:id])
-		if @gif.user != current_user
+		if session[:current_user_id] != @gif.user_id
 			redirect_to user_path(session[:current_user_id])
 		else @gif.destroy
 			redirect_to user_path(session[:current_user_id])

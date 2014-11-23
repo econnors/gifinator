@@ -11,7 +11,6 @@ class UsersController < ApplicationController
 	#a short bio HAS VIEW
 	def show
 		@user = User.find(params[:id])
-		@tags = Tags.all
 	end
 
 	#Sign up page / Home landing page / should have a sign up form
