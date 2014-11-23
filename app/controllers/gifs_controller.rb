@@ -6,25 +6,12 @@ class GifsController < ApplicationController
 	#will have links to individaul users and links to tag displays
 	#**NEEDS / HAS VIEW
 	def index
-		@gif = Gif.get_gif
+		@gif = Gif.all
 	end
-
-
-	@gifs = []
-
-Gif.all.each do |gif|
-  s3_key = "#{gif.id}.gif"
-  obj = objects[s3_key]
-  data = obj.read
-  @gifs.push(data)
-end
-
-
 
 	#Will have comments option on this page#**NEEDS / HAS VIEW
 	def show
-		@gif = Gif.get_gif
-		#@gif = Gif.find(params[:id])
+		@gif = Gif.find(params[:id])
 	end
 
 	#create a new gif, will also have the tag create in this route.
@@ -38,26 +25,25 @@ end
 	#Will also create a tag and push the tag to the join table
 
 	def create
-		ziggeo = Ziggeo.new("90ed6ab82e70ec226efe2a5778945a62", "c2f718974008f07d567255e53b80a754", "292d3ac71c64213d968d24af93b23bdc")
-		data = ziggeo.videos.download_video(params[:videotoken])
-		#you should be able to put the data variable directly to s3 
-		s3.buckets[gifmy].objects[data].write(:emily => emily)
+		conv = HTTParty.get("https://api.cloudconvert.com/convert?apikey=EmVosLg9lZclfQxDH2P_YgIdUiWdEAesejdKrpnoRmyOtRJ1oIzUhzQ_1yBYRbw9taIxhlM7BE7byDZZx-xo9Q&input=download&download=inline&inputformat=mp4&outputformat=gif&file=https%3A%2F%2Fembed.ziggeo.com%2Fv1%2Fapplications%2F90ed6ab82e70ec226efe2a5778945a62%2Fvideos%2F#{params[:videotoken]}%2Fvideo.mp4&converteroptions[video_resolution]=480x320&converteroptions[video_fps]=5")
+		binding.pry
+		sleep(6)
+		value = HTTParty.get("https://api.cloudconvert.com/processes?apikey=EmVosLg9lZclfQxDH2P_YgIdUiWdEAesejdKrpnoRmyOtRJ1oIzUhzQ_1yBYRbw9taIxhlM7BE7byDZZx-xo9Q")[-1].values[5]
+		url = value.gsub("process", "download")
+		gif = ("https:#{url}?inline")
+
+		Gif.create({
+			image_url: gif,
+			user_id: session[:current_user_id]
+		})
 	end
-
-	#def create_gif
-	#	s3 = User.new_aws_request
-	#	bucket = s3.buckets[ENV['BUCKET']]
-	#	bucket.acl = :public_read
-	#end
-
-
 
 	#delete any specific gif. The gif may only be deleted by its user.
 	#I would like this to redirect to the page of the currently logged in user
 	#need to work out the redirect path
 	def destroy
 		@gif = Gif.find(params[:id])
-		if @gif.user != current_user
+		if @gif.user_id != session[:current_user_id]
 			redirect_to user_path(session[:current_user_id])
 		else @gif.destroy
 			redirect_to user_path(session[:current_user_id])
@@ -73,10 +59,6 @@ end
 
 
 	private
-
-	def gif_params
-		params.require(:gif).permit(:title, :user_id)
-	end
 
 	def tag_params
 		params.require(:gif).permit(:name)

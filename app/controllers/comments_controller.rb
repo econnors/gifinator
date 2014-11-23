@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 	#** NEEDS / HAS VIEW
 	def edit
 		@comment = Comment.find(params[:id])
-		if @comment.user != current_user
+		if @comment.user_id != session[:current_user_id]
 			redirect_to user_path(session[:current_user_id])
 		else
 		end
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
 	#put route for the edit route
 	def update
 		@comment = Comment.find(params[:id])
-		if @comment.user != current_user
+		if @comment.user_id != session[:current_user_id]
 			redirect_to user_path(session[:current_user_id])
 		else
 			if @comment.update(comment_params)
@@ -41,7 +41,7 @@ class CommentsController < ApplicationController
 	#delete route for comment
 	def destroy
 		@comment = Comment.find(params[:id])
-		if @comment.user != current_user
+		if @comment.user_id != session[:current_user_id]
 			redirect_to user_path(session[:current_user_id])
 		else
 			@comment.destroy
