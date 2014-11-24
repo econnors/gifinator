@@ -1,18 +1,3 @@
-.user_form select option[value="1"]   { background-image: url('http://www.merrickpubliclibrary.org/images/Dipiodocus.gif');   }
-.user_form select option[value="2"] { background-image: url('https://www.google.com/search?q=cute+dinosaur&es_sm=91&tbm=isch&tbo=u&source=univ&sa=X&ei=JxJuVK78OszdsASxw4HABA&ved=0CB8QsAQ&biw=1160&bih=581#facrc=_&imgdii=_&imgrc=X8HJMhIfYfDkHM%253A%3BE7iL8y9TNVyDRM%3Bhttp%253A%252F%252Fwww.sciencekids.co.nz%252Fimages%252Fpictures%252Fdinosaurs%252Ftriceratops%252Ftriceratopscartoon.jpg%3Bhttp%253A%252F%252Fwww.sciencekids.co.nz%252Fpictures%252Fdinosaurs%252Ftriceratops%252Ftriceratopscartoon.html%3B552%3B597'); }
-.user_form select option[value="3"] { background-image: url(); }
-.user_form select option[value="4"]   { background-image: url();   }
-.user_form select option[value="5"] { background-image: url(); }
-.user_form select option[value="6"] { background-image: url(); }
-.user_form select option[value="7"]   { background-image: url();   }
-.user_form select option[value="8"] { background-image: url(); }
-.user_form select option[value="9"] { background-image: url(); }
-.user_form select option[value="10"]   { background-image: url();   }
-.user_form select option[value="11"] { background-image: url(); }
-.user_form select option[value="12"] { background-image: url(); }
-
-
-
 /*css reset*/
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
@@ -99,13 +84,14 @@ body {
 	}
 
 .useridpage {
+	float: right;
 	width: 100%;
 	text-align: center;
 }
 
 #userinfo {
 	background:rgba(255,255,255, 0.8);
-	width: 60%;
+	width: 50%;
 	display: inline-block;
 	text-align: center;
 	margin-top: 20px;
@@ -117,6 +103,10 @@ body {
 .uinfoname {
 	font-family: 'Rokkitt', serif;
 
+}
+
+#uinfophoto {
+	border-radius: 100px;
 }
 
 .edituserinfo {

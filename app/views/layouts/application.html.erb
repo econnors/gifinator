@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GifinatorApp</title>
+  <title>Gif.Me</title>
   <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//assets.ziggeo.com/css/ziggeo-betajs-player.min.css" />
 	<script src="//assets.ziggeo.com/js/ziggeo-jquery-json2-betajs-player.min.js"></script>
@@ -13,10 +13,10 @@
 
 <section id="header">
 	<div class="sitename">
-		<h1>Gifinator</h1>
+		<h1>Gif.Me</h1>
 	</div>
 	<div class="login">
-		<% if session[:current_user_id] %> Welcome to GifMe, <%= User.find(session[:current_user_id]).username %>
+		<% if session[:current_user_id] %> Welcome to Gif.<%= link_to "#{User.find(session[:current_user_id]).username}", user_path(session[:current_user_id]) %>
 		<%= link_to "Log_out", sessions_path, method: :delete %>
 		<% else %>
 		<%= form_tag(sessions_path) do%>
@@ -31,6 +31,8 @@
 		<% end %>
 	</div>
 </section>
+
+
 
 <body>
 

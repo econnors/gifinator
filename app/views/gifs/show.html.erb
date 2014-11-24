@@ -1,4 +1,9 @@
 <h1>hello show</h1>
-
-
-<img src="<%= @gif.image_url %>" >
+<div class="useridpage">
+	<div id="ueditinfo">
+		<img src="<%= @gif.image_url %>" ><br>
+		 GifMe made by <%= link_to "#{User.find(@gif.user_id).username}", user_path(@gif.user_id) %>  ||  Created on <%= @gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
+	</div>
+</div>
+<!-- 
+User.find_by(@gif.user_id).username -->
