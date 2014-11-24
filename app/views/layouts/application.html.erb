@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Gif.Me</title>
-  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="//assets.ziggeo.com/css/ziggeo-betajs-player.min.css" />
-	<script src="//assets.ziggeo.com/js/ziggeo-jquery-json2-betajs-player.min.js"></script>
-	<script>ZiggeoApi.token = "90ed6ab82e70ec226efe2a5778945a62";</script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-
-<section id="header">
-	<div class="sitename">
-		<h1>Gif.Me</h1>
-	</div>
-	<div class="login">
-		<% if session[:current_user_id] %> Welcome to Gif.<%= link_to "#{User.find(session[:current_user_id]).username}", user_path(session[:current_user_id]) %>
-		<%= link_to "Log_out", sessions_path, method: :delete %>
-		<% else %>
-		<%= form_tag(sessions_path) do%>
-			<%= label_tag :username %>
-			<%= text_field_tag :username %>
-
-			<%= label_tag :password %>
-			<%= password_field_tag :password %>
-
-			<%= submit_tag "Login" %>
-			<% end %>
-		<% end %>
-	</div>
-</section>
-
-
-
-<body>
-
-<%= yield %>
-
-</body>
-
-</html>
+	<head>
+		<title>Gif.Me</title>
+		<!-- GOOGLE FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+			
+		<!-- ZIGGEO VIDEO INFO -->
+		<link rel="stylesheet" href="//assets.ziggeo.com/css/ziggeo-betajs-player.min.css" />
+			<script src="//assets.ziggeo.com/js/ziggeo-jquery-json2-betajs-player.min.js"></script>
+			<script>ZiggeoApi.token = "90ed6ab82e70ec226efe2a5778945a62";</script>
+		
+		<!-- LITTLE ICON ON TAB -->
+		<link rel="shortcut icon" type="image/png" href="http://i.imgur.com/ESxNYBC.png">
+			<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+			<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+			<%= csrf_meta_tags %>
+	</head>
+	
+		<section id="header">
+			<div class="sitename">
+				<!-- 		<h1>Gif.Me</h1> -->
+				<img src="http://i.imgur.com/AK2vTpj.gif" height=60>
+			</div>
+			
+			<div class="login">
+				<% if session[:current_user_id] %> Welcome to Gif.<%= link_to "#{User.find(session[:current_user_id]).username}", user_path(session[:current_user_id]) %>
+				<%= link_to "Log_out", sessions_path, method: :delete %>
+				<% else %>
+				<%= form_tag(sessions_path) do%>
+				<%= label_tag :username %>
+				<%= text_field_tag :username %>
+				<%= label_tag :password %>
+				<%= password_field_tag :password %>
+				<%= submit_tag "Login" %>
+				<% end %>
+				<% end %>
+			</div>
+		
+		</section>
+	
+		<body>
+			<%= yield %>
+		</body>
+	
+	</html>

@@ -9,7 +9,8 @@ resources :gifs, only: [:create, :index, :show, :new, :destroy] do
 	end
 end
 
-resources :tags, only: [:show, :edit]
+# resources :tags, only: [:index, :create, :show, :edit]
+resources :tags
 resources :comments, only: [:new, :edit, :destroy, :create]
 
  get 'sessions/new' => 'sessions#new', as: 'login'

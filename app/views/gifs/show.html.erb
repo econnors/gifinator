@@ -7,3 +7,16 @@
 </div>
 <!-- 
 User.find_by(@gif.user_id).username -->
+
+<center><h1>Add A New Tag</h1></center><br>
+<div style="text-align: center;">
+<form action="/tags" method="POST">
+	<label for="name">Tag Name:
+		<input type="text" name="tag[name]">
+	</label>	
+	<button>Create</button>
+<br><br>
+	<a href="/tags">Back to List of Tags</a>
+</form>
+</div>
+<br>

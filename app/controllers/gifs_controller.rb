@@ -12,6 +12,7 @@ class GifsController < ApplicationController
 	#Will have comments option on this page#**NEEDS / HAS VIEW
 	def show
 		@gif = Gif.find(params[:id])
+		@tags = Tag.all
 	end
 
 	#create a new gif, will also have the tag create in this route.
