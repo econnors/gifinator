@@ -1,1 +1,4 @@
-<!-- needs view  -->
+<% @users.each do |user| %>
+<%= user.username %>
+<%= image_tag(ProfilePicture.find(user.profile_picture_id).image_url) %>
+<% end %>
