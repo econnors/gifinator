@@ -4,8 +4,13 @@
 	</div>
 	
 		<% @gif.each do |gif| %>
-		<div>
-		<img src="<%= gif.image_url %>">
-		<% end %>
+		<div class="useridpage">
+		 <div id="ueditinfo" >
+			<%= link_to image_tag(gif.image_url), gif_path(gif.id) %><br>
+			 GifMe made by <%= link_to "#{User.find(gif.user_id).username}", user_path(gif.user_id) %>  ||  Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
+		</div>
 	</div>
+	<% end %>
+	
 </section>
+
