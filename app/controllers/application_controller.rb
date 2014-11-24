@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
 
 	def authenticate
-		redirect_to login_path unless session[:current_user_id]
+		redirect_to new_user_path unless session[:current_user_id]
 	end
 
 	def current_user

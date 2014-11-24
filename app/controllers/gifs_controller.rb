@@ -4,19 +4,19 @@ class GifsController < ApplicationController
 	before_action :authenticate
 	#will be the community board where all the gifs are displayed
 	#will have links to individaul users and links to tag displays
-	#**NEEDS / HAS VIEW
+	#HAS VIEW
 	def index
-		@gif = Gif.all
+		@gif = Gif.order(created_at: :desc)
 	end
 
-	#Will have comments option on this page#**NEEDS / HAS VIEW
+	#Will have comments option on this page HAS VIEW
 	def show
 		@gif = Gif.find(params[:id])
 		@tags = Tag.all
 	end
 
 	#create a new gif, will also have the tag create in this route.
-	##**NEEDS / HAS VIEW
+	#HAS VIEW
 	def new
 		@gif = Gif.new
 		#@tag = Tag.new
@@ -33,10 +33,12 @@ class GifsController < ApplicationController
 		gif_url = ("https:#{url}?inline")
 
 		@gif = Gif.create({
-			image_url: gif_url,
-			user_id: session[:current_user_id]
+												image_url: gif_url,
+												user_id: session[:current_user_id]
 		})
 		redirect_to user_path(session[:current_user_id])
+
+		#add tag create
 	end
 
 	#delete any specific gif. The gif may only be deleted by its user.

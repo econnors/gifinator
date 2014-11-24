@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
 
 	#Show all active users in the system. We can make them all selectable to see
-	#their profiles and gifs specifically. **NEEDS / HAS VIEW
+	#their profiles and gifs specifically. HAS VIEW
 	def index
 		@users = User.all
 	end
