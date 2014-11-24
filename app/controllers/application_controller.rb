@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   	render text: ENV["TEST_VARIABLE"]
   end
 
+  def application
+  	render text: ENV["TEST_VARIABLE"]
+  end
+
 	# Prevent CSRF attacks by raising an exception.
 	# For APIs, you may want to use :null_session instead.
 	protect_from_forgery with: :exception

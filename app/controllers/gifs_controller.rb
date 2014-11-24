@@ -26,9 +26,10 @@ class GifsController < ApplicationController
 	#Will also create a tag and push the tag to the join table
 
 	def create
-		conv = HTTParty.get("https://api.cloudconvert.com/convert?apikey=EmVosLg9lZclfQxDH2P_YgIdUiWdEAesejdKrpnoRmyOtRJ1oIzUhzQ_1yBYRbw9taIxhlM7BE7byDZZx-xo9Q&input=download&download=inline&inputformat=mp4&outputformat=gif&file=https%3A%2F%2Fembed.ziggeo.com%2Fv1%2Fapplications%2F90ed6ab82e70ec226efe2a5778945a62%2Fvideos%2F#{params[:videotoken]}%2Fvideo.mp4&converteroptions[video_resolution]=480x320&converteroptions[video_fps]=5")
+		cloudconverturl = "https://api.cloudconvert.com/convert?apikey=#{ ENV['CLOUD_CONVERT_KEY'] }&input=download&download=inline&inputformat=mp4&outputformat=gif&file=https%3A%2F%2Fembed.ziggeo.com%2Fv1%2Fapplications%2F#{ ENV['ZIGGEO_APPLICATION_TOKEN'] }%2Fvideos%2F#{params[:videotoken]}%2Fvideo.mp4&converteroptions[video_resolution]=480x320&converteroptions[video_fps]=5"
+		conv = HTTParty.get(cloudconverturl)
 		sleep(1)
-		value = HTTParty.get("https://api.cloudconvert.com/processes?apikey=EmVosLg9lZclfQxDH2P_YgIdUiWdEAesejdKrpnoRmyOtRJ1oIzUhzQ_1yBYRbw9taIxhlM7BE7byDZZx-xo9Q")[-1].values[5]
+		value = HTTParty.get("https://api.cloudconvert.com/processes?apikey=#{ ENV['CLOUD_CONVERT_KEY'] }")[-1].values[5]
 		url = value.gsub("process", "download")
 		gif_url = ("https:#{url}?inline")
 
