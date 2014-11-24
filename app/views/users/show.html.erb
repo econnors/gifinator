@@ -22,20 +22,21 @@
 		</div>
 	</div>
 	<div style="float: left;">
-		<% @user.gifs.each do |gif| %>
-		<div style="background:rgba(255,255,255, 0.8);
-			padding: 10px;
-			text-align: center;
-			margin-top: 20px;
-			margin-bottom:20px;
-			border: 2px solid #FF7F50;
-			border-radius: 20px;">
-			<%= link_to image_tag(gif.image_url), gif_path(gif.id) %>
-			Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br>  <% if @user.id == session[:current_user_id] %> <br><%= button_to "Delete Gif", gif_path(gif.id), method: :delete %> <% end %>
+		<% @user.gifs.order(created_at: :desc).each do |gif| %>
+		<div style="background:rgba(255,255,255, 0.8); padding: 10px; text-align: center; margin-top: 20px;
+			margin-bottom:20px; border: 2px solid #FF7F50; border-radius: 20px;">
+			<%= link_to image_tag(gif.image_url), gif_path(gif.id) %><br>
+			Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br> 
+			Tags: <% gif.tags.each do |tag| %> <%=link_to tag.name, tag_path(tag.id)%> 
+				<% if @user.id == session[:current_user_id] %> <%= button_to "Delete Tag", tag_path(tag.id), method: :delete%>
+				<% end %> 
+			<% end %> 
+			<% if @user.id == session[:current_user_id] %> <br><%= button_to "Delete Gif", gif_path(gif.id), method: :delete %> 
+	    <% end %>
 		</div>
 		<% end %>
 	</div>
 	<div>
-	<%= link_to image_tag("http://i.imgur.com/QwkibJn.png"), new_gif_path %>
-</div>
+		<%= link_to image_tag("http://i.imgur.com/QwkibJn.png"), new_gif_path %>
+	</div>
 </section>

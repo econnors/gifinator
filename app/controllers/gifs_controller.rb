@@ -1,6 +1,10 @@
 class GifsController < ApplicationController
 
 
+	#====================
+	#  RESTFUL ROUTES
+  #====================
+
 	before_action :authenticate
 	#will be the community board where all the gifs are displayed
 	#will have links to individaul users and links to tag displays
@@ -12,7 +16,6 @@ class GifsController < ApplicationController
 	#Will have comments option on this page HAS VIEW
 	def show
 		@gif = Gif.find(params[:id])
-		@tags = Tag.all
 	end
 
 	#create a new gif, will also have the tag create in this route.
@@ -36,7 +39,19 @@ class GifsController < ApplicationController
 												image_url: gif_url,
 												user_id: session[:current_user_id]
 		})
+
+		tag_one = Tag.find_or_create_by({
+													 name: "#{params[:tag_one]}"
+		})
+
+		tag_two = Tag.find_or_create_by({
+													 name: "#{params[:tag_two]}"
+		})
+
+		@gif.tags.push(tag_one, tag_two)
+
 		redirect_to user_path(session[:current_user_id])
+
 
 		#add tag create
 	end
@@ -53,18 +68,35 @@ class GifsController < ApplicationController
 		end
 	end
 
+	#====================
+	# NON RESTFUL ROUTES
+  #====================
 
-	#removing individual tag from gif
+  #====================
+	#   ADD TAG TO GIF
+  #====================
 
-	def remove_tag
+	def add_tag
+		@tag = Tag.find_or_create_by({
+			name: "#{params[:tag]}"
+			})
+		@gif = Gif.find(params[:id])
+		@gif.tags.push(@tag)
+		redirect_to gif_path(@gif)
 	end
 
+	#====================
+	# ADD COMMENT TO GIF
+  #====================
 
-
-	private
-
-	def tag_params
-		params.require(:gif).permit(:name)
-	end
+  def add_comment
+  	@gif = Gif.find(params[:id])
+  	@comment = Comment.create({
+  		comment: "#{params[:comment]}",
+  		user_id: session[:current_user_id],
+  		gif_id: @gif.id
+  		})
+  	redirect_to gif_path(@gif)
+  end
 
 end
