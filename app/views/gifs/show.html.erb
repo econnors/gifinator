@@ -1,22 +1,27 @@
-<h1>hello show</h1>
 <div class="useridpage">
 	<div id="ueditinfo">
 		<img src="<%= @gif.image_url %>" ><br>
-		 GifMe made by <%= link_to "#{User.find(@gif.user_id).username}", user_path(@gif.user_id) %>  ||  Created on <%= @gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
+		GifMe made by <%= link_to "#{User.find(@gif.user_id).username}", user_path(@gif.user_id) %>  ||  Created on <%= @gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br> Tags: <% @gif.tags.each do |tag| %> <%=link_to tag.name, tag_path(tag.id)%> <% end %>
+	</div>
+	<h3>COMMENTS</h3>
+	<div>
+		<% @gif.comments.order(created_at: :desc).each do |comment| %>
+		<br><%= comment.comment %>
+		<%= link_to User.find(comment.user_id).username, user_path(comment.user_id) %>  || <%= comment.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br>
+		---------------------------------------------------------
+		<% end %>
 	</div>
 </div>
-<!-- 
+<!--
 User.find_by(@gif.user_id).username -->
+<center>
+	<h1>Add A New Tag</h1><br>
+	<%= form_tag(add_tag_gif_path) do %> <%= text_field_tag :tag %>    <%= submit_tag "Add Tag" %> <% end %> </center><br>
 
-<center><h1>Add A New Tag</h1></center><br>
-<div style="text-align: center;">
-<form action="/tags" method="POST">
-	<label for="name">Tag Name:
-		<input type="text" name="tag[name]">
-	</label>	
-	<button>Create</button>
-<br><br>
-	<a href="/tags">Back to List of Tags</a>
-</form>
-</div>
-<br>
+<center>
+	<h1>Add A New Comment</h1><br>
+	<%= form_tag(add_comment_gif_path) do%>
+	<%= text_area_tag :comment %>
+	<%= submit_tag "Add Comment" %>
+	<% end %>
+</center>
