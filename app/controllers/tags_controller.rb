@@ -40,18 +40,6 @@ class TagsController < ApplicationController
 		end
 	end
 
-
-
-# UPDATE
-put('/tags/:id') do
-  tag = Tag.find(params[:id])
-  if tag.update(params[:tag])
-    redirect("/tags/#{tag.id}")
-  else 
-    redirect("/tags/#{tag.id}/edit")
-  end
-end
-
 # ADD POST TO TAG
 def add_tag
   tag = Tag.find(params[:id])
