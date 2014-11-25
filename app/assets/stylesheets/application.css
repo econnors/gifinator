@@ -48,6 +48,17 @@ table {
 	border-spacing: 0;
 }
 
+label {
+  font-family :'Press Start 2P', cursive;
+  font-size  : 100%;
+}
+link {
+	text-decoration: none
+}
+
+textarea {
+	width: 90%;
+}
 
 /* css style */
 #header {
@@ -79,6 +90,12 @@ h1 {
 	color: #FF7F50;
 }
 
+h2 {
+	font-size: 20px;
+	font-family: 'Press Start 2P', cursive;
+	color: black;
+}
+
 body {
 	background: url("http://static.vecteezy.com/system/resources/previews/000/030/053/original/Mario_Clouds_preview.jpg");
 	background-image: no-repeat 100%;
@@ -108,8 +125,9 @@ p {
 }
 
 #userinfo {
+	float: right;
 	background:rgba(255,255,255, 0.8);
-	width: 50%;
+	width: 40%;
 	display: inline-block;
 	text-align: center;
 	margin-top: 20px;
@@ -123,6 +141,7 @@ p {
 }
 
 #uinfophoto {
+	width: 100%;
 	border-radius: 100px;
 }
 
@@ -171,10 +190,34 @@ p {
 	float: right;
 	width: 40%;
 	height: 500px;
-	background-image: url("https://s3.amazonaws.com/uploads.hipchat.com/39979/1241021/O6G0Xys6HeSuenj/large.jpg");
+	background-image: url("http://i.imgur.com/93bmNjF.png");
 	background-size: 100% 100%;
 }
 
 #howtosteps {
 	padding: 35px 25px;
+}
+
+#showgif {
+	float: left;
+	width: 50%;
+	background:rgba(255,255,255, 0.8); 
+	padding: 10px; 
+	text-align: center; 
+	margin-top: 20px;
+	margin-bottom:20px; 
+	border: 2px solid #FF7F50; 
+	border-radius: 20px;
+}
+
+#comment-tag {
+	float: right;
+	width: 40%;
+	background:rgba(255,255,255, 0.8); 
+	padding: 10px; 
+	text-align: center; 
+	margin-top: 20px;
+	margin-bottom:20px; 
+	border: 2px solid #FF7F50; 
+	border-radius: 20px;
 }
