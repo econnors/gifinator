@@ -1,15 +1,20 @@
+<section class="page">
+	
+	<div id="userform">
+		<h1>Welcome to Gif.me! Sign up to play with personal gifs!</h1>
+		<br>
+		<%= form_for @user do |f| %>
 
-<div class="user_form">
-<%= form_for @user do |f| %>
+		<%= render partial: "form", locals: {f: f} %>
 
-<%= render partial: "form", locals: {f: f} %>
+		<%= f.label :password %><br>
+		<%= f.password_field :password %><br>
 
-<%= f.label :password %><br>
-<%= f.password_field :password %><br>
+		<%= f.label :password_confirmation %><br>
+		<%= f.password_field :password_confirmation %><br>
 
-<%= f.label :password_confirmation %><br>
-<%= f.password_field :password_confirmation %><br>
-
-<br><%= f.submit "Join GifMe" %><br>
-<% end %>
-</div>
+	<br>	
+	<%= f.submit "Join GifMe" %><br>
+	<% end %>
+	</div>
+</section>

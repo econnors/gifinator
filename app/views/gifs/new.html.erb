@@ -1,9 +1,18 @@
-<section>
-	<div>
+<section class="page">
+	<div id="videorecorder">
 		<%= form_tag(gifs_path, method: :post) do  %>
-		<ziggeo ziggeo-width=550 ziggeo-height=400 ziggeo-input_bind='videotoken' type='hidden'></ziggeo><br>
+		<div id="ziggeo">
+			<ziggeo ziggeo-width=550 ziggeo-height=400 ziggeo-input_bind='videotoken' type='hidden'></ziggeo>
+		</div>
+		<br>
+		<p>Add some tags!</p>
 		<%= text_field_tag :tag_one %> || <%= text_field_tag :tag_two %><br>
 		<br><%= image_submit_tag "http://i.imgur.com/cwRoKkc.png" %>
 		<% end %>
+	</div>
+	<div id="howto">
+		<div id="howtosteps">
+			<p>I love sweet roll applicake unerdwear.com tootsie roll. Tiramisu wafer lollipop. Marshmallow sesame snaps carrot cake pie chupa chups lollipop I love. Candy tart I love soufflé jelly beans sesame snaps chocolate chupa chups. Marzipan I love I love cotton candy. Lollipop chocolate cotton candy lemon drops carrot cake oat cake powder candy canes.</p>
+		</div>
 	</div>
 </section>
