@@ -25,7 +25,16 @@
 			
 			<!-- <div class="gifup"> -->
 				   <a href=" <%= gifs_path %>"><img src="http://i.imgur.com/szPuzuR.png" onmouseover="this.src='http://i.imgur.com/Erl7LCu.png'" onmouseout="this.src='http://i.imgur.com/szPuzuR.png'"/></a> 
-			</div>
+
+
+
+					<!-- USERS HOVER -->
+				  <a href="<%=users_path%>"><img src="http://i.imgur.com/yxIe3Am.png" onmouseover="this.src='http://i.imgur.com/zI69iTP.png'" onmouseout="this.src='http://i.imgur.com/e0DL4kr.png'" /></a><br><br>
+					
+
+					<!-- LOGOUT HOVER -->
+				  <a href="<%=users_new_path%>"><img src="http://i.imgur.com/ucNVzIp.png" onmouseover="this.src='http://i.imgur.com/VSbOF4x.png'" onmouseout="this.src='http://i.imgur.com/ucNVzIp.png'" /></a><br><br> 
+				  </div>
 
 			<div class="login">
 				<% if session[:current_user_id] %> Welcome to Gif.<%= link_to "#{User.find(session[:current_user_id]).username}", user_path(session[:current_user_id]) %>
