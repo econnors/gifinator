@@ -1,16 +1,15 @@
 <section id="gifsindex">
+	
 	<div id="divsection">
 		<h1> All Gifs </h1>
 	</div>
 	
-		<% @gif.each do |gif| %>
-		<div class="useridpage">
-		 <div id="ueditinfo" >
-			<%= link_to image_tag(gif.image_url), gif_path(gif.id) %><br>
-			 GifMe made by <%= link_to "#{User.find(gif.user_id).username}", user_path(gif.user_id) %>  ||  Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
+	<% @gif.each do |gif| %>
+	<div class="useridpage">
+		<div id="ueditinfo" >
+			<%= render partial: "gif", locals: {gif: gif} %>
 		</div>
 	</div>
 	<% end %>
 	
 </section>
-

@@ -1,19 +1,16 @@
 <div class="useridpage">
 	<div id="ueditinfo">
-		<img src="<%= @gif.image_url %>" ><br>
-		GifMe made by <%= link_to "#{User.find(@gif.user_id).username}", user_path(@gif.user_id) %>  ||  Created on <%= @gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br> Tags: <% @gif.tags.each do |tag| %> <%=link_to tag.name, tag_path(tag.id)%> <% end %>
+	<%= render partial: "gif", locals: {gif: @gif} %> 
 	</div>
 	<h3>COMMENTS</h3>
 	<div>
 		<% @gif.comments.order(created_at: :desc).each do |comment| %>
 		<br><%= comment.comment %>
-		<%= link_to User.find(comment.user_id).username, user_path(comment.user_id) %>  || <%= comment.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br>
+		<%= link_to User.find(comment.user_id).username, user_path(comment.user_id) %>  || <%= comment.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br> <% if comment.user_id == session[:current_user_id] %> <%= button_to "Delete Comment", remove_comment_gif_path(comment.id), method: :delete %> <% end %>
 		---------------------------------------------------------
 		<% end %>
 	</div>
 </div>
-<!--
-User.find_by(@gif.user_id).username -->
 <center>
 	<h1>Add A New Tag</h1><br>
 	<%= form_tag(add_tag_gif_path) do %> <%= text_field_tag :tag %>    <%= submit_tag "Add Tag" %> <% end %> </center><br>
