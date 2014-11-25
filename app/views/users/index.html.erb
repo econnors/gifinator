@@ -1,6 +1,11 @@
-<% @users.each do |user| %>
-<div style="background-color: white; border: 3px solid black;">
-<%= link_to image_tag(ProfilePicture.find(user.profile_picture_id).image_url), user_path(user.id) %>
-<%= user.username %>
-</div>
-<% end %>
+<section class="page">
+	<div id="userindex">
+		<% @users.each do |user| %>
+		<div id="userindexshow">
+			<%= link_to image_tag(ProfilePicture.find(user.profile_picture_id).image_url), user_path(user.id) %>
+			<p> -------- </p>
+			<h2><%= user.username %></h2>
+		</div>
+		<% end %>
+	</div>
+</section>

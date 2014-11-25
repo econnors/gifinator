@@ -4,16 +4,10 @@
 	</div>
 	<div>
 		<% @gif.each do |gif| %>
-		<div class="gifbox">
-			<div id="gifshot" >
-				<%= link_to image_tag(gif.image_url), gif_path(gif.id) %>
-			</div>
-			<br>
-			<div id="gifinfo">
+			<div id="gifindex">
+				<br>
 				<%= render partial: "gif", locals: {gif: gif} %>
 			</div>
-		</div>
 	</div>
 		<% end %>
-		
-	</section>
+</section>

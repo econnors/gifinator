@@ -9,10 +9,11 @@
 		<div id="uinfophoto">
 			<img src=" <%= ProfilePicture.find(@user.profile_picture_id).image_url %> " style="height: 300px; border-radius: 50%;"/>
 		</div>
-		
+		<br>
 		<div id="uinfobio">
 			<%= @user.bio %>
 		</div>
+		<br>
 		<div id="uinfoedit">
 			<% if @user.id == session[:current_user_id]%>
 			<%= link_to "Edit Your Info", edit_user_path %>
@@ -22,6 +23,7 @@
 			<%= link_to "Delete My Account", user_path, method: :delete %>
 			<% end %>
 		</div>
+		<br>
 	</div>
 	<div id="showgif">
 		<h2>Your Gifs</h2>

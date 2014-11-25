@@ -1,3 +1,10 @@
-<% @tag.gifs.each do |gif|%>
-<%= render partial: "gifs/gif", locals: {gif: gif} %>
-<% end %>
+<section class="page">
+	<div id="gifindex">
+
+		<% @tag.gifs.each do |gif|%>
+		<br>
+		<%= render partial: "gifs/gif", locals: {gif: gif} %>
+	</div>
+	<% end %>
+</section>
+

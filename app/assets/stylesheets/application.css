@@ -225,3 +225,41 @@ p {
 	border: 2px solid #FF7F50; 
 	border-radius: 20px;
 }
+
+#userindex {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom:20px;
+}
+
+#userindexshow {
+	display: inline-block;
+	float: left;
+	background:rgba(255,255,255, 0.8);
+	width: 22%;
+	height: 400px;
+	text-align: center;
+	margin: 20px 10px;
+	border: 2px solid #FF7F50;
+	border-radius: 20px;
+}
+
+#userindex img {
+	border-radius: 20px;
+	width: 100%;
+}
+
+#gifindex {
+	display: inline-block;
+	float: left;
+	background:rgba(255,255,255, 0.8);
+	width: 45%;
+	height: 350px;
+	text-align: center;
+	margin: 20px 10px;
+	border: 2px solid #FF7F50;
+	border-radius: 20px;
+}
