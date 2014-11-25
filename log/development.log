@@ -1,0 +1,1021 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 15:20:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (1.3ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/_form.html.erb (43.8ms)
+  Rendered users/new.html.erb within layouts/application (65.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 225ms (Views: 184.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 15:20:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 15:20:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 15:20:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 15:20:41 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 15:20:41 -0500
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 15:20:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProfilePicture Load (0.5ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mGif Load (0.4ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (41.7ms)
+  [1m[36mUser Load (6.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 96ms (Views: 85.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 15:20:46 -0500
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 88ms (Views: 80.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 15:21:59 -0500
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 95ms (Views: 67.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 15:21:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 15:21:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 15:21:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 15:21:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 15:21:59 -0500
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 15:22:50 -0500
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 15:22:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 15:22:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 15:22:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 15:22:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 15:22:50 -0500
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-11-24 16:00:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TagsController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 26ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 16:00:34 -0500
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (0.8ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/_form.html.erb (77.3ms)
+  Rendered users/new.html.erb within layouts/application (107.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 252ms (Views: 222.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:00:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:00:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:00:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:00:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:00:35 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 16:22:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (16.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (17.4ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/_form.html.erb (80.0ms)
+  Rendered users/new.html.erb within layouts/application (105.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 280ms (Views: 222.3ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:22:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:22:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:22:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:22:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:22:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:22:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:22:38 -0500
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 16:22:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProfilePicture Load (0.3ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mGif Load (35.1ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (109.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 158ms (Views: 116.7ms | ActiveRecord: 37.7ms)
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 16:22:47 -0500
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 74ms (Views: 67.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 16:23:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mProfilePicture Load (0.4ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mGif Load (0.4ms)[0m  [1mSELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 72ms (Views: 66.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-24 16:23:23 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mProfilePicture Load (0.4ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered users/index.html.erb within layouts/application (43.1ms)
+Completed 500 Internal Server Error in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find ProfilePicture with 'id'=15):
+  app/views/users/index.html.erb:3:in `block in _app_views_users_index_html_erb___3354730034933265183_70228384889680'
+  app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb___3354730034933265183_70228384889680'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-24 16:23:33 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mProfilePicture Load (0.9ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 15ms
+
+ActiveRecord::RecordNotFound (Couldn't find ProfilePicture with 'id'=15):
+  app/views/users/index.html.erb:3:in `block in _app_views_users_index_html_erb___3354730034933265183_70228384889680'
+  app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb___3354730034933265183_70228384889680'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-24 16:23:36 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mProfilePicture Load (0.4ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActiveRecord::RecordNotFound (Couldn't find ProfilePicture with 'id'=15):
+  app/views/users/index.html.erb:3:in `block in _app_views_users_index_html_erb___3354730034933265183_70228384889680'
+  app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb___3354730034933265183_70228384889680'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-24 16:25:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mProfilePicture Load (0.7ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered users/index.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 73ms
+
+ActiveRecord::RecordNotFound (Couldn't find ProfilePicture with 'id'=15):
+  app/views/users/index.html.erb:3:in `block in _app_views_users_index_html_erb__3387302510430280119_70097195513780'
+  app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb__3387302510430280119_70097195513780'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 16:25:33 -0500
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (0.4ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/_form.html.erb (59.3ms)
+  Rendered users/new.html.erb within layouts/application (70.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 180ms (Views: 177.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:25:34 -0500
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 16:25:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProfilePicture Load (0.4ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mGif Load (0.4ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (42.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 108ms (Views: 101.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-11-24 16:25:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mProfilePicture Load (0.5ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mGif Load (0.3ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (97.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 146ms (Views: 140.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:25:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:25:42 -0500
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-11-24 16:27:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mProfilePicture Load (0.7ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mGif Load (0.8ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC  [["user_id", 4]]
+  [1m[36mTag Load (32.8ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 4]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 3]]
+  Rendered users/show.html.erb within layouts/application (205.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 370ms (Views: 242.9ms | ActiveRecord: 82.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:27:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:27:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:27:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:27:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:27:40 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:27:45 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGif Load (0.4ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mComment Load (18.8ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (36.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 89ms (Views: 63.4ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:30:20 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (1.3ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.7ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (184.4ms)
+Completed 500 Internal Server Error in 222ms
+
+ActionView::Template::Error (undefined local variable or method `gif' for #<#<Class:0x007f93e3b67be0>:0x007f93e4990640>):
+    28: 
+    29: 
+    30: 
+    31: <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F<%=gif.image_url%>&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+  app/views/gifs/show.html.erb:31:in `_app_views_gifs_show_html_erb__1677099343154738776_70136577465820'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:31:04 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (4.3ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.7ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (118.1ms)
+Completed 500 Internal Server Error in 165ms
+
+ActionView::Template::Error (undefined local variable or method `gif' for #<#<Class:0x007f93e3b67be0>:0x007f93e3d8fb70>):
+    28: 
+    29: 
+    30: 
+    31: <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F<%="#{gif.image_url}"%>&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+  app/views/gifs/show.html.erb:31:in `_app_views_gifs_show_html_erb__1677099343154738776_70136579777900'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:31:16 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (0.5ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (11.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 88ms (Views: 83.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:31:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:31:17 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:31:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:31:17 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:31:17 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:32:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (0.7ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (101.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 273ms (Views: 208.7ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:32:42 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:32:48 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGif Load (0.5ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 68ms (Views: 63.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:48 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:32:48 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:32:52 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (0.4ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (46.0ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (undefined local variable or method `gif' for #<#<Class:0x007febcaeeea90>:0x007febcb944940>):
+    28: 
+    29: 
+    30: 
+    31: <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F"<%="#{gif.image_url}"%>"&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+  app/views/gifs/show.html.erb:31:in `_app_views_gifs_show_html_erb___580573891122157823_70325354757580'
+
+
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/margarethuang/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.7ms)
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:32:56 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (0.5ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.7ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (11.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:32:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:32:56 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:33:13 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGif Load (0.5ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 64ms (Views: 58.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:33:13 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:33:21 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (0.6ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (77.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 129ms (Views: 123.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:33:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:33:21 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:34:12 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGif Load (2.5ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (42.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 232ms (Views: 171.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:12 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:34:12 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:34:18 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (1.0ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (11.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 187ms (Views: 181.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:34:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:34:18 -0500
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 16:37:46 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGif Load (10.8ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (4.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (55.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 227ms (Views: 159.2ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:37:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:37:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:37:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:37:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:37:47 -0500
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 16:38:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProfilePicture Load (0.9ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mGif Load (0.6ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (65.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 199ms (Views: 155.8ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 16:38:39 -0500
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (6.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 139ms (Views: 135.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 16:42:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (1.6ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/_form.html.erb (83.2ms)
+  Rendered users/new.html.erb within layouts/application (127.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 359ms (Views: 275.9ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:42:42 -0500
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 16:42:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProfilePicture Load (0.4ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mGif Load (0.8ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (46.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 97ms (Views: 90.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 16:42:48 -0500
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 76ms (Views: 60.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 16:45:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (6.0ms)
+  [1m[35mUser Load (6.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 399ms (Views: 288.3ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:45:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:45:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:45:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:45:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:45:14 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 16:49:47 -0500
+Processing by UsersController#new as HTML
+  [1m[36mProfilePicture Load (24.7ms)[0m  [1mSELECT "profile_pictures".* FROM "profile_pictures"[0m
+  Rendered users/_form.html.erb (225.2ms)
+  Rendered users/new.html.erb within layouts/application (287.8ms)
+  [1m[35mUser Load (15.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 424ms (Views: 350.4ms | ActiveRecord: 47.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:49:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:49:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:49:48 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:49:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:49:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:49:48 -0500
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 16:49:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mProfilePicture Load (0.5ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mGif Load (31.0ms)[0m  [1mSELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (131.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 183ms (Views: 146.6ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/gifs/new" for 127.0.0.1 at 2014-11-24 16:49:52 -0500
+Processing by GifsController#new as HTML
+  Rendered gifs/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/gifs" for 127.0.0.1 at 2014-11-24 16:51:31 -0500
+Processing by GifsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oafFYTKzhOsku3tVQLa8jk7r4Um5KDVaNA4HRMSygqg=", "videotoken"=>"3c6bfcb29774fdb857182f196665a7b2", "tag_one"=>"Coolkids", "tag_two"=>"Coolerkids", "x"=>"95", "y"=>"59"}
+  [1m[35m (15.1ms)[0m  BEGIN
+  [1m[36mSQL (64.4ms)[0m  [1mINSERT INTO "gifs" ("created_at", "image_url", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-24 21:51:39.897648"], ["image_url", "https://l1.cloudconvert.com/download/CFhaNEyG6zkiWODQunM5?inline"], ["updated_at", "2014-11-24 21:51:39.897648"], ["user_id", 3]]
+  [1m[35m (3.5ms)[0m  COMMIT
+  [1m[36mTag Load (1.7ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'Coolkids' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (25.6ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-24 21:51:40.059873"], ["name", "coolkids"], ["updated_at", "2014-11-24 21:51:40.059873"]]
+  [1m[35m (10.0ms)[0m  COMMIT
+  [1m[36mTag Load (2.4ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'Coolerkids' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-24 21:51:40.103530"], ["name", "coolerkids"], ["updated_at", "2014-11-24 21:51:40.103530"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gifs_tags" ("gif_id", "tag_id") VALUES ($1, $2)  [["gif_id", 8], ["tag_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifs_tags" ("gif_id", "tag_id") VALUES ($1, $2)[0m  [["gif_id", 8], ["tag_id", 2]]
+  [1m[35m (16.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 8627ms (ActiveRecord: 151.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 16:51:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mProfilePicture Load (0.5ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mGif Load (0.4ms)[0m  [1mSELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC[0m  [["user_id", 3]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 8]]
+  Rendered users/show.html.erb within layouts/application (123.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 174ms (Views: 167.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:51:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:51:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:51:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:51:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:51:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:51:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:51:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:51:41 -0500
+
+
+Started GET "/gifs/8" for 127.0.0.1 at 2014-11-24 16:51:55 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mGif Load (0.3ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 8]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 8]]
+  Rendered gifs/show.html.erb within layouts/application (15.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 61ms (Views: 54.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/gifs/8" for 127.0.0.1 at 2014-11-24 16:58:39 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mGif Load (53.3ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.8ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 8]]
+  [1m[35mComment Load (2.6ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 8]]
+  Rendered gifs/show.html.erb within layouts/application (44.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 474ms (Views: 375.8ms | ActiveRecord: 57.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 16:58:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 16:58:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 16:58:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 16:58:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 16:58:40 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 20:25:29 -0500
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (117.8ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/_form.html.erb (1479.8ms)
+  Rendered users/new.html.erb within layouts/application (2613.9ms)
+  [1m[36mUser Load (21.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 6542ms (Views: 5210.8ms | ActiveRecord: 139.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 20:25:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 20:25:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 20:25:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 20:25:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 20:25:41 -0500
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-11-24 20:26:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (18.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mProfilePicture Load (93.3ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mGif Load (51.7ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC  [["user_id", 4]]
+  [1m[36mTag Load (23.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mTag Load (15.7ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 4]]
+  [1m[36mTag Load (0.8ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 3]]
+  Rendered users/show.html.erb within layouts/application (829.5ms)
+  [1m[35mUser Load (20.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 3959ms (Views: 3631.0ms | ActiveRecord: 223.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-11-24 20:26:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (31.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mProfilePicture Load (0.6ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mGif Load (0.9ms)[0m  [1mSELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC[0m  [["user_id", 3]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 8]]
+  Rendered users/show.html.erb within layouts/application (131.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 570ms (Views: 532.5ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 20:26:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 20:26:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 20:26:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 20:26:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-24 20:26:24 -0500
+
+
+Started GET "/gifs/4" for 127.0.0.1 at 2014-11-24 20:26:27 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mGif Load (0.9ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 4]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 4]]
+  Rendered gifs/show.html.erb within layouts/application (72.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 170ms (Views: 160.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 20:26:43 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGif Load (0.5ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (34.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mComment Load (27.7ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (78.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 497ms (Views: 321.2ms | ActiveRecord: 63.6ms)
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 20:26:43 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGif Load (1.0ms)[0m  SELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (19.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.9ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 7]]
+  [1m[36mComment Load (2.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC[0m  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (65.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 845ms (Views: 816.5ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/gifs/7" for 127.0.0.1 at 2014-11-24 20:26:44 -0500
+Processing by GifsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGif Load (0.5ms)[0m  [1mSELECT  "gifs".* FROM "gifs"  WHERE "gifs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1[0m  [["gif_id", 7]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."gif_id" = $1  ORDER BY "comments"."created_at" DESC  [["gif_id", 7]]
+  Rendered gifs/show.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 113ms (Views: 107.3ms | ActiveRecord: 2.1ms)
