@@ -1,27 +1,49 @@
 class UsersController < ApplicationController
 
 
-	#Show all active users in the system. We can make them all selectable to see
-	#their profiles and gifs specifically. HAS VIEW
+	#======================
+	#    ALL USERS PAGE
+	#======================
+
+	#Show all active users in the system. From here you can select any profile to view. 
+
 	def index
 		@users = User.all
+		if session[:current_user_id] == nil
+			redirect_to new_user_path
+		end
 	end
 
-	#Show the users individual page. Will have the profile pic, all gifs
-	#a short bio HAS VIEW
+	#======================
+	#  USER ACCOUNT PAGE
+	#======================
+
+	#Show the users individual page. Has profile pic, all gifs a short bio 
+	#Allows users to delete gifs, tags, whole account from this view. 
+
 	def show
 		@user = User.find(params[:id])
+		@show_delete_tag_buttons = true
 		#@tags = Tags.all
 	end
 
-	#Sign up page / Home landing page / should have a sign up form
-	#log in form if already signed up HAS VIEW
+	#======================
+	#  NEW USER SHOW PAGE
+	#======================
+
+	#This is the login page. Allows user to make an account. Landing page for the app.
+	#Has a log in/log out button depending on the status of the session 
 
 	def new
 		@user = User.new
 	end
 
-	#Post route for the user new page / should redirect to the users specific page
+	#========================
+	#  NEW USER CREATE ROUTE
+	#========================
+
+	#This is the login page. Allows user to make an account. Landing page for the app. 
+
 	def create
 		@user = User.new(user_params)
 		if @user.save
@@ -32,8 +54,13 @@ class UsersController < ApplicationController
 		end
 	end
 
-	#accesable only through your indiviudal profile page / ability to delete your
-	#own gifs and edit your profile info  HAS VIEW
+	#======================
+	#  EDIT USER SHOW PAGE
+	#======================
+
+  #A user can edit their profile picture, bio and username. 
+  #Only accessible to individual account if logged in. 
+
 	def edit
 		@user = User.find(params[:id])
 		if @user != current_user
@@ -41,7 +68,10 @@ class UsersController < ApplicationController
 		end
 	end
 
-	#put route for the edit route
+	#=====================
+	#  UPDATE USER ROUTE
+	#=====================
+
 	def update
 		@user = User.find(params[:id])
 		if @user != current_user
@@ -55,8 +85,14 @@ class UsersController < ApplicationController
 		end
 	end
 
-	#delete route for the user / ability to delete all their info including any comments
-	# gifs
+
+  #=====================
+	#    DELETE USER 
+	#=====================
+
+	#ability for only the user to be delete all their info including any comments
+	# and gifs
+
 	def destroy
 		@user = User.find(params[:id])
 		if @user != current_user
@@ -73,9 +109,14 @@ class UsersController < ApplicationController
 
 	private
 
+	#================
+	#   PARAMS
+	#================
+
 	#params for the new user form.
+
 	def user_params
-		params.require(:user).permit(:username, :profile_picture_id, :bio, :password)
+		params.require(:user).permit(:username, :profile_picture_id, :bio, :password, :password_confirmation)
 	end
 
 end

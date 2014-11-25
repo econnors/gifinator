@@ -28,21 +28,8 @@
 		<% @user.gifs.order(created_at: :desc).each do |gif| %>
 		<div>
 		<br>
-		<%= link_to image_tag(gif.image_url), gif_path(gif.id), :class =>"gif" %>
-		<br>
-		Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
-		<br>
-		<br>
-		<h2>Tags:</h2> 
-		<ul style="display: inline-block; width: 100%;">
-			<li><% gif.tags.each do |tag| %> <%=link_to tag.name, tag_path(tag.id)%> 
-				<% if @user.id == session[:current_user_id] %> <%= link_to image_tag("http://i.imgur.com/LacXCAu.png"), tag_path(tag.id), method: :delete%>
-				<% end %> 
-			</li>
-			<% end %> 
-		</ul>
-		<br>
-			<% if @user.id == session[:current_user_id] %> <br><%= link_to image_tag("http://i.imgur.com/xITs3kM.png"), gif_path(gif.id), method: :delete %> 
+			<%= render partial: "gifs/gif", locals: {gif: gif} %>
+			<% if @user.id == session[:current_user_id] %> <%= link_to image_tag("http://i.imgur.com/LacXCAu.png"), tag_path(tag.id), method: :delete%>
 	    <% end %>
 		</div>
 		<p> ----------------------- </p>

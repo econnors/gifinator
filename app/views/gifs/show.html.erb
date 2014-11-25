@@ -1,20 +1,20 @@
 <section class="page">
 	<div id="showgif">
-		<img src="<%= @gif.image_url %>" ><br>
-		GifMe made by <%= link_to "#{User.find(@gif.user_id).username}", user_path(@gif.user_id) %>  ||  Created on <%= @gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br> Tags: <% @gif.tags.each do |tag| %> <%=link_to tag.name, tag_path(tag.id)%> <% end %>
+		<%= render partial: "gif", locals: {gif: @gif} %> 
 		<div>
 			<h3>COMMENTS</h3>
 		</div>
+
 		<div>
-		<% @gif.comments.order(created_at: :desc).each do |comment| %>
-		<br><%= comment.comment %>
-		<%= link_to User.find(comment.user_id).username, user_path(comment.user_id) %>  || <%= comment.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br>
-		---------------------------------------------------------
-		<% end %>
+			<% @gif.comments.order(created_at: :desc).each do |comment| %>
+			<br>
+			<%= comment.comment %>
+			<%= link_to User.find(comment.user_id).username, user_path(comment.user_id) %>  || <%= comment.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br> <% if comment.user_id == session[:current_user_id] %> <%= button_to "Delete Comment", remove_comment_gif_path(comment.id), method: :delete %> <% end %>
+					---------------------------------------------------------
+			<% end %>
 		</div>
 	</div>
-
-	<div id="comment-tag">
+   <div id="comment-tag">
 		<div>
 			<h2>Add A New Tag</h2>
 			<br>
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 
-<center>
-	<iframe src="//www.facebook.com/plugins/like.php?href=<%=@gif.image_url%>&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
-</center>
+	<div>
+		<iframe src="//www.facebook.com/plugins/like.php?href=<%=@gif.image_url%>&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+	</div>
 </section>

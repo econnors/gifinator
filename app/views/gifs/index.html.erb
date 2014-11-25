@@ -10,11 +10,10 @@
 			</div>
 			<br>
 			<div id="gifinfo">
-				GifMe made by <%= link_to "#{User.find(gif.user_id).username}" , user_path(gif.user_id) %>  ||  Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
+				<%= render partial: "gif", locals: {gif: gif} %>
 			</div>
 		</div>
 	</div>
-	<% end %>
-	
-</section>
-
+		<% end %>
+		
+	</section>
