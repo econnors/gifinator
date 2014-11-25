@@ -1,31 +1,38 @@
-<div class="useridpage">
-	<div id="ueditinfo">
+<section class="page">
+	<div id="showgif">
 		<img src="<%= @gif.image_url %>" ><br>
 		GifMe made by <%= link_to "#{User.find(@gif.user_id).username}", user_path(@gif.user_id) %>  ||  Created on <%= @gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br> Tags: <% @gif.tags.each do |tag| %> <%=link_to tag.name, tag_path(tag.id)%> <% end %>
-	</div>
-	<h3>COMMENTS</h3>
-	<div>
+		<div>
+			<h3>COMMENTS</h3>
+		</div>
+		<div>
 		<% @gif.comments.order(created_at: :desc).each do |comment| %>
 		<br><%= comment.comment %>
 		<%= link_to User.find(comment.user_id).username, user_path(comment.user_id) %>  || <%= comment.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %><br>
 		---------------------------------------------------------
 		<% end %>
+		</div>
 	</div>
-</div>
-<!--
-User.find_by(@gif.user_id).username -->
-<center>
-	<h1>Add A New Tag</h1><br>
-	<%= form_tag(add_tag_gif_path) do %> <%= text_field_tag :tag %>    <%= submit_tag "Add Tag" %> <% end %> </center><br>
 
-<center>
-	<h1>Add A New Comment</h1><br>
-	<%= form_tag(add_comment_gif_path) do%>
-	<%= text_area_tag :comment %>
-	<%= submit_tag "Add Comment" %>
-	<% end %>
-</center>
+	<div id="comment-tag">
+		<div>
+			<h2>Add A New Tag</h2>
+			<br>
+			<%= form_tag(add_tag_gif_path) do %> <%= text_field_tag :tag %>    <%= submit_tag "Add Tag" %> <% end %>
+		</div>
+		<br>
+
+		<div>
+			<h2>Add A New Comment</h2>
+			<br>
+			<%= form_tag(add_comment_gif_path) do%>
+			<%= text_area_tag :comment %>
+			<%= submit_tag "Add Comment" %>
+			<% end %>
+		</div>
+	</div>
 
 <center>
 	<iframe src="//www.facebook.com/plugins/like.php?href=<%=@gif.image_url%>&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
 </center>
+</section>

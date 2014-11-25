@@ -1,20 +1,29 @@
 <section class="page">
-	
+
 	<div id="userform">
 
 		<% @user.errors.full_messages.each do |msg| %>
 		<li><%= msg %></li>
 		<% end %>
 
-		<h1>Welcome to Gif.me! Sign up to play with personal gifs!</h1>
+		<h1>
+			<span style="color: red;"> Ready! </span>
+			<span style="color: #DEDB31;"> Set! </span>
+			<span style="color: green;"> Gif! <span>
+		</h1>
+		<br>
+		<img src="http://themushroomkingdom.net/images/ani/ani_smk_lakitugo.gif" width="55px" height="60px">
+		<br>
+		<h2>Sign up to start making personal gifs!</h2>
+
 		<br>
 
 		<%= form_for @user do |f| %>
 		<%= render partial: "form", locals: {f: f} %>
-
+		<br>
 		<%= f.label :password %><br>
 		<%= f.password_field :password %><br>
-
+		<br>
 		<%= f.label :password_confirmation %><br>
 		<%= f.password_field :password_confirmation %><br>
 
