@@ -1,13 +1,17 @@
-<section id="gifsindex">
+<section class="page">
 	<div id="divsection">
 		<h1> All Gifs </h1>
 	</div>
-	
+	<div>
 		<% @gif.each do |gif| %>
-		<div class="useridpage">
-		 <div id="ueditinfo" >
-			<%= link_to image_tag(gif.image_url), gif_path(gif.id) %><br>
-			 GifMe made by <%= link_to "#{User.find(gif.user_id).username}", user_path(gif.user_id) %>  ||  Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
+		<div class="gifbox">
+			<div id="gifshot" >
+				<%= link_to image_tag(gif.image_url), gif_path(gif.id) %>
+			</div>
+			<br>
+			<div id="gifinfo">
+				GifMe made by <%= link_to "#{User.find(gif.user_id).username}" , user_path(gif.user_id) %>  ||  Created on <%= gif.created_at.localtime.strftime("%I:%M%p on %m/%d/%Y") %>
+			</div>
 		</div>
 	</div>
 	<% end %>
