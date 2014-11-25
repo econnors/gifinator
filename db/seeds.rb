@@ -78,7 +78,7 @@ ProfilePicture.create ({
 ProfilePicture.create ({
 	image_url: "http://i.imgur.com/7LKcT3C.png",
 	name: "8-Bit Captain America"
-	 })
+	 });
 
 
 ProfilePicture.create ({
