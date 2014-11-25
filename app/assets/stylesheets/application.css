@@ -60,11 +60,12 @@ textarea {
 	width: 90%;
 }
 
+
 /* css style */
 #header {
 	height: 10%;
 	display: inline-block;
-	background-image: url("http://ian-albert.com/games/super_mario_bros_maps/mario-4-1.gif");
+	background-image: url("http://i.imgur.com/pTiKB7F.png");
 	background-repeat:no-repeat;
   background-size:100% 100%;
 	background-color: #FF7F50;
@@ -79,10 +80,13 @@ textarea {
 }
 
 .login {
-	float: left;
+	float: right;
 	width: 30%;
 	height: 20%;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 8px;
 }
+
 
 h1 {
 	font-size: 30px;
