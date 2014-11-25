@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="user_form">
 	<% @user.errors.full_messages.each do |msg| %>
 	<li><%= msg %></li>
@@ -13,3 +14,25 @@
 	<br><%= f.submit "Join GifMe" %><br>
 	<% end %>
 </div>
+=======
+<section class="page">
+	
+	<div id="userform">
+		<h1>Welcome to Gif.me! Sign up to play with personal gifs!</h1>
+		<br>
+		<%= form_for @user do |f| %>
+
+		<%= render partial: "form", locals: {f: f} %>
+
+		<%= f.label :password %><br>
+		<%= f.password_field :password %><br>
+
+		<%= f.label :password_confirmation %><br>
+		<%= f.password_field :password_confirmation %><br>
+
+	<br>	
+	<%= f.submit "Join GifMe" %><br>
+	<% end %>
+	</div>
+</section>
+>>>>>>> ce7a0bf7fd30229e0e1da16df7bb744851d932e2

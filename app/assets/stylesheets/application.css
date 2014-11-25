@@ -74,9 +74,9 @@ table {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 30px;
 	font-family: 'Press Start 2P', cursive;
-	color: white;
+	color: #FF7F50;
 }
 
 body {
@@ -84,10 +84,27 @@ body {
 	background-image: no-repeat 100%;
 	}
 
-.useridpage {
-	float: right;
-	width: 100%;
+p {
+	font-family: 'Press Start 2P', cursive;
+}
+
+.page{
+	width: relative;
+	margin: 30px;
 	text-align: center;
+
+}
+
+#userform {
+	background:rgba(255,255,255, 0.8);
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom:20px;
+	border: 2px solid #FF7F50;
+	border-radius: 20px;
+	padding: 10px;
 }
 
 #userinfo {
@@ -103,7 +120,6 @@ body {
 
 .uinfoname {
 	font-family: 'Rokkitt', serif;
-
 }
 
 #uinfophoto {
@@ -144,4 +160,21 @@ body {
 	margin-bottom:20px;
 }
 
+#videorecorder{
+	padding-left: 60px;
+	float: left;
+	width: 550px;
+}
 
+#howto {
+	margin: 0px 30px;
+	float: right;
+	width: 40%;
+	height: 500px;
+	background-image: url("https://s3.amazonaws.com/uploads.hipchat.com/39979/1241021/O6G0Xys6HeSuenj/large.jpg");
+	background-size: 100% 100%;
+}
+
+#howtosteps {
+	padding: 35px 25px;
+}
