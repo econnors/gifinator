@@ -24,7 +24,6 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@show_delete_tag_buttons = true
-		#@tags = Tags.all
 	end
 
 	#======================
@@ -42,8 +41,6 @@ class UsersController < ApplicationController
 	#  NEW USER CREATE ROUTE
 	#========================
 
-	#This is the login page. Allows user to make an account. Landing page for the app. 
-
 	def create
 		@user = User.new(user_params)
 		if @user.save
@@ -59,7 +56,7 @@ class UsersController < ApplicationController
 	#======================
 
   #A user can edit their profile picture, bio and username. 
-  #Only accessible to individual account if logged in. 
+  #Only accessible to individual if logged in. 
 
 	def edit
 		@user = User.find(params[:id])
