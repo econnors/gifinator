@@ -3944,3 +3944,146 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 19:53:20
 
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 19:53:20 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 20:13:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  [1m[35mProfilePicture Load (0.5ms)[0m  SELECT "profile_pictures".* FROM "profile_pictures"
+  Rendered users/_form.html.erb (26.3ms)
+  Rendered users/new.html.erb within layouts/application (41.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 147ms (Views: 122.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 20:13:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:01 -0500
+
+
+Started GET "/users/6" for 127.0.0.1 at 2014-11-25 20:13:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mProfilePicture Load (0.3ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mGif Load (0.6ms)[0m  SELECT "gifs".* FROM "gifs"  WHERE "gifs"."user_id" = $1  ORDER BY "gifs"."created_at" DESC  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/gifs" for 127.0.0.1 at 2014-11-25 20:13:05 -0500
+Processing by GifsController#index as HTML
+  [1m[35mGif Load (0.3ms)[0m  SELECT "gifs".* FROM "gifs"   ORDER BY "gifs"."created_at" DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 13]]
+  Rendered gifs/_gif.html.erb (26.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 12]]
+  Rendered gifs/_gif.html.erb (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 11]]
+  Rendered gifs/_gif.html.erb (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 10]]
+  Rendered gifs/_gif.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "gifs_tags" ON "tags"."id" = "gifs_tags"."tag_id" WHERE "gifs_tags"."gif_id" = $1  [["gif_id", 9]]
+  Rendered gifs/_gif.html.erb (2.4ms)
+  Rendered gifs/index.html.erb within layouts/application (45.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 83ms (Views: 75.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-25 20:13:07 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mProfilePicture Load (0.3ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mProfilePicture Load (0.2ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mProfilePicture Load (0.2ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mProfilePicture Load (0.3ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mProfilePicture Load (0.3ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mProfilePicture Load (0.3ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered users/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-25 20:13:23 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mProfilePicture Load (0.2ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mProfilePicture Load (0.2ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mProfilePicture Load (0.1ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mProfilePicture Load (0.1ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mProfilePicture Load (0.1ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mProfilePicture Load (0.2ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered users/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:23 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 20:13:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:23 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-25 20:13:34 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mProfilePicture Load (0.2ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mProfilePicture Load (0.2ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mProfilePicture Load (0.1ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mProfilePicture Load (0.2ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mProfilePicture Load (0.2ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mProfilePicture Load (0.1ms)[0m  [1mSELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "profile_pictures".* FROM "profile_pictures"  WHERE "profile_pictures"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered users/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 20:13:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 20:13:34 -0500
