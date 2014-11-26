@@ -62,8 +62,9 @@ textarea {
 
 
 /* css style */
-#header {
-	height: 10%;
+.header {
+	position: relative;
+	height: 100px;
 	display: inline-block;
 	background-image: url("http://i.imgur.com/pTiKB7F.png");
 	background-repeat:no-repeat;
@@ -73,18 +74,51 @@ textarea {
 	width: 100%;
 }
 
-.sitename {
+#sitename { 
+	position: absolute;
+	bottom: 20px;
+	left: 10px;
 	float: left;
-	width: 60%;
-	height: 20%;
+	width: 20%;
+	
 }
 
-.login {
-	float: right;
-	width: 30%;
-	height: 20%;
+#sitename img {
+	width: 100%;
+}
+
+#allgifsbutton {
+	position: absolute;
+	bottom: 5px;
+	left: 250px;
+	float: left;
+
+}
+
+#allgifsbutton img {
+	width: 100%;
+}
+
+#userhover {
+	position: absolute;
+	bottom: 2px;
+	left: 430px;
+	float: left;
+}
+
+#userhover img {
+	height: 110px;
+	margin-bottom: 4px;
+}
+
+#login {
+	position: absolute;
+	float: left;
+	margin-top: 10px;
+	left: 620px;
+
 	font-family: 'Press Start 2P', cursive;
-	font-size: 8px;
+	font-size: 15px;
 }
 
 
@@ -263,3 +297,14 @@ p {
 	border: 2px solid #FF7F50;
 	border-radius: 20px;
 }
+
+.logout:hover {
+	background-image: url('http://i.imgur.com/ucNVzIp.png');
+
+}
+
+.sitename {
+	width: 20%;
+}
+
+
