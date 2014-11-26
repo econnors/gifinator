@@ -31,7 +31,7 @@
 		<div>
 		<br>
 			<%= render partial: "gifs/gif", locals: {gif: gif} %>
-			<% if @user.id == session[:current_user_id] %> <%= link_to image_tag("http://i.imgur.com/LacXCAu.png"), tag_path(tag.id), method: :delete%>
+			<% if @user.id == session[:current_user_id] %> <%= button_to "Delete Gif", tag_path(tag.id), method: :delete%>
 	    <% end %>
 		</div>
 		<p> ----------------------- </p>
