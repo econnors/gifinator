@@ -31,7 +31,7 @@
 		<div>
 		<br>
 			<%= render partial: "gifs/gif", locals: {gif: gif} %>
-			<% if @user.id == session[:current_user_id] %> <%= button_to "Delete Gif" gif_path(gif.id), method: :delete%>
+			<% if @user.id == session[:current_user_id] %> <%= button_to "Delete Gif", gif_path(gif.id), method: :delete%>
 	    <% end %>
 		</div>
 		<p> ----------------------- </p>
