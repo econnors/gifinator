@@ -26,10 +26,10 @@
 		<br>
 	</div>
 	<div id="showgif">
+		<div>
 		<h2>Your Gifs</h2>
 		<% @user.gifs.order(created_at: :desc).each do |gif| %>
-		<div>
-		<br>
+			<br>
 			<%= render partial: "gifs/gif", locals: {gif: gif} %>
 			<% if @user.id == session[:current_user_id] %> <%= button_to "Delete Gif", tag_path(tag.id), method: :delete%>
 	    <% end %>
