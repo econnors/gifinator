@@ -1,12 +1,17 @@
 <section class="page">
-	<h1>All users</h1>
+	<h1>ALL USERS</h1>
 	<div id="userindex">
 		<% @users.each do |user| %>
 		<div id="userindexshow">
-			<%= link_to image_tag(ProfilePicture.find(user.profile_picture_id).image_url), user_path(user.id) %>
+			 <div class="userindexphoto">
+				<%= link_to image_tag(ProfilePicture.find(user.profile_picture_id).image_url), user_path(user.id) %>
+			</div> 
 			<p> -------- </p>
 			<h2><%= user.username %></h2>
+			<h3><%= user.bio%></h3>
 		</div>
 		<% end %>
 	</div>
 </section>
+
+

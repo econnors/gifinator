@@ -5,8 +5,9 @@
 		<% @user.errors.full_messages.each do |msg| %>
 		<li><%= msg %></li>
 		<% end %>
-
+<center>
 		<h1>
+			<br>
 			<span style="color: red;"> Ready! </span>
 			<span style="color: #DEDB31;"> Set! </span>
 			<span style="color: green;"> Gif! <span>
@@ -16,22 +17,32 @@
 		<br>
 		<br>
 		<h2>Sign up to start making personal gifs!</h2>
-
+</center>
+	
 		<br>
-
+		<center><div class="input">
 		<%= form_for @user do |f| %>
 		<%= render partial: "form", locals: {f: f} %>
+		</div>
 		<br>
+	
+
+		<div class="input">
 		<%= f.label :password %><br>
 		<%= f.password_field :password %><br>
+		</div>
 		<br>
+
+
+		<div class="input">
 		<%= f.label :password_confirmation %><br>
 		<%= f.password_field :password_confirmation %><br>
-
+		</div>
 		<br>	
-		<%= f.submit "Join GifMe" %><br>
+
+		<%= f.submit "Join GifMe", :id=>"submit" %><br>
 		<% end %>
 	</div>
-
+</center>
 </section>
 

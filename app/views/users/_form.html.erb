@@ -1,11 +1,17 @@
 
 <br>
-
+<div class="input">
 <%= f.label :username %><br>
-<%= f.text_field :username %><br>
+<%= f.text_field :username %>
+</div>
 <br>
+
+<div class="input">
 <%= f.label :bio %><br>
-<%= f.text_area :bio, :cols => "80", :rows => "10" %><br>
+<%= f.text_area :bio, :rows => "3" %>
+</div>
 <br>
-<%= label_tag "Profile Picture" %>
-<br><%= collection_select(:user, :profile_picture_id, ProfilePicture.all, :id, :name, prompt: true) %><br>
+
+<div class="input">
+<%= label_tag "Profile Picture" %><br><%= collection_select(:user, :profile_picture_id, ProfilePicture.all, :id, :name, prompt: true) %><br>
+</div>

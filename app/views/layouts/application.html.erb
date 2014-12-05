@@ -2,9 +2,14 @@
 <html>
 	<head>
 		<title>Me</title> <!--follows little Gif PNG in browser tab -->
-		<!-- GOOGLE FONTS -->
-	<!-- 	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'> -->
+
+
+		<!-- GOOGLE FONTS WORK IN HEROKU -->
+		<!-- 	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'> -->
+		<%= stylesheet_link_tag "application", 'http://fonts.googleapis.com/css?family=Inconsolata', :media => "all" %>	
 		<%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Press+Start+2P', :media => "all" %>	
+		<%= stylesheet_link_tag "application", 'http://fonts.googleapis.com/css?family=Ubuntu+Mono', :media => "all" %>	
+		
 		<!-- ZIGGEO VIDEO INFO -->
 		<link rel="stylesheet" href="//assets.ziggeo.com/css/ziggeo-betajs-player.min.css" />
 			<script src="//assets.ziggeo.com/js/ziggeo-jquery-json2-betajs-player.min.js"></script>
@@ -18,24 +23,35 @@
 	</head>
 	
 		<section class="header">
+
+		<!-- Gif Title Image -->
+
 			<div id="sitename">
 				<img src="http://i.imgur.com/AK2vTpj.gif">
 			</div> 
 			
-			<div id="allgifsbutton"
-				<a href=" <%= gifs_path %>"><img src="http://i.imgur.com/szPuzuR.png" onmouseover="this.src='http://i.imgur.com/Erl7LCu.png'" onmouseout="this.src='http://i.imgur.com/szPuzuR.png'"/>
+		<!-- SHOW ALL GIF  BUTTON  -->
+			<div id="allgifsbutton">
+				<a href="<%=gifs_path%>"><img src="http://i.imgur.com/szPuzuR.png" onmouseover="this.src='http://i.imgur.com/Erl7LCu.png'" onmouseout="this.src='http://i.imgur.com/szPuzuR.png'"/>
 				</a>
 			</div>
 
+		<!-- SHOW ALL USER BUTTON  -->
 			<div id="userhover">
 				<a href="<%=users_path%>"><img src="http://i.imgur.com/A3fOWQp.png" onmouseover="this.src='http://i.imgur.com/8kXodFu.png'" onmouseout="this.src='http://i.imgur.com/A3fOWQp.png'"/>
 				</a>
 			</div>
 
+
+
+<!-- LITTLE ICON ON TAB -->
+
 			<div id="login">
 				<% if session[:current_user_id] %> Welcome to Gif.<%= link_to "#{User.find(session[:current_user_id]).username}", user_path(session[:current_user_id]) %> ||
 				<%= link_to "Logout", sessions_path, method: :delete %>
 				<% else %>
+
+
 				<%= form_tag(sessions_path) do%>
 
 				<%= label_tag :username %>:
@@ -46,10 +62,18 @@
 				<%= password_field_tag :password %>
 
 				<br>
-				<%= submit_tag "Login" %>
+				<%= submit_tag "Login", :id=>"login_button" %>
 				<% end %>
 				<% end %>
 			</div>
+
+			<div id="endhover">
+				<a href="<%=users_path%>"><img src="http://i.imgur.com/ucNVzIp.png" onmouseover="this.src='http://i.imgur.com/VSbOF4x.png'" onmouseout="this.src='http://i.imgur.com/ucNVzIp.png'" />
+				</a>
+			</div>
+
+
+			
 		
 		</section>
 	

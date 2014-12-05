@@ -39,7 +39,7 @@ class GifsController < ApplicationController
   ##     CREATE A GIF
   ##=========================
 
-	#The meat and potatos of this app. Runs an HTTP get request to CloudConverter API
+	#Runs an HTTP get request to CloudConverter API
 	#with the just recorded video being passed into the params. 
 	#Then runs another HTTP get request to get the json of the list of files you have converted. 
 	#grabs the newest video, and then the value of the url videos are stored at. 

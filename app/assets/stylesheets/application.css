@@ -48,20 +48,73 @@ table {
 	border-spacing: 0;
 }
 
+
+/*LABEL FOR ALL FORMS */
+
 label {
-  font-family :'Press Start 2P', cursive;
-  font-size  : 100%;
+	font-family: 'Ubuntu Mono', cursive;
+  font-size  : 15px;
+  color: #ffffff ;
 }
+
 link {
 	text-decoration: none
 }
 
 textarea {
-	width: 90%;
+	width: 25%;
 }
 
 
 /* css style */
+
+/** ===================== GLOBAL STYLING ==================== **/
+body {
+	background: url("http://static.vecteezy.com/system/resources/previews/000/030/053/original/Mario_Clouds_preview.jpg");
+	background-image: no-repeat 100%;
+	}
+
+
+a:link{
+	text-decoration: none;
+	color: black;
+
+}
+
+a:visited{
+	color: red;
+}
+
+a:hover{
+	color: cyan;
+
+}
+
+p {
+	font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+	font-size: 30px;
+	font-family: 'Press Start 2P', cursive;
+	color: #FF7F50;
+}
+
+h2 {
+	font-size: 10px;
+	font-family: 'Press Start 2P', cursive;
+	color: black;
+}
+
+.sitename {
+	width: 20%;
+}
+
+#userindexshow a img {
+	height: 75%;
+}
+/** ===================== HEADER ==================== **/
+
 .header {
 	position: relative;
 	height: 100px;
@@ -74,93 +127,190 @@ textarea {
 	width: 100%;
 }
 
+/* GIF.ME COLOR SIGN */
 #sitename { 
 	position: absolute;
 	bottom: 20px;
 	left: 10px;
 	float: left;
-	width: 20%;
+	padding-left: 40px;
 	
 }
 
+/* SIZE OF THE COLOR SIGN */
 #sitename img {
-	width: 100%;
+	height: 60px;
 }
 
-#allgifsbutton {
-	position: absolute;
-	bottom: 5px;
-	left: 250px;
-	float: left;
-
-}
+/* GIF ME HOVER BUTTON */
+	#allgifsbutton {
+		position: absolute;
+		bottom: 10px;
+		left: 385px;
+		float: left;
+	}
 
 #allgifsbutton img {
 	width: 100%;
 }
 
-#userhover {
-	position: absolute;
-	bottom: 2px;
-	left: 430px;
-	float: left;
-}
-
-#userhover img {
-	height: 110px;
-	margin-bottom: 4px;
-}
-
-#login {
-	position: absolute;
-	float: left;
-	margin-top: 10px;
-	left: 620px;
-
-	font-family: 'Press Start 2P', cursive;
-	font-size: 15px;
-}
-
-
-h1 {
-	font-size: 30px;
-	font-family: 'Press Start 2P', cursive;
-	color: #FF7F50;
-}
-
-h2 {
-	font-size: 20px;
-	font-family: 'Press Start 2P', cursive;
-	color: black;
-}
-
-body {
-	background: url("http://static.vecteezy.com/system/resources/previews/000/030/053/original/Mario_Clouds_preview.jpg");
-	background-image: no-repeat 100%;
+/* USERS HOVER BUTTON */
+	#userhover {
+		position: absolute;
+		bottom: 2px;
+		left: 760px;
+		float: left;
 	}
 
-p {
-	font-family: 'Press Start 2P', cursive;
-}
+	#userhover img {
+		height: 110px;
+		margin-bottom: 4px;
+	}
 
-.page{
+/** ===================== .PAGE ==================== **/
+
+.page {
 	width: relative;
 	margin: 30px;
 	text-align: center;
+}
+
+.page h1{
+ -webkit-text-stroke: 0px black;
+   color: black;
+   text-shadow:
+       5px 5px 0 #fff,
+     -1px -1px 0 #fff,  
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+       1px 1px 0 #fff;
+    font-size: 45px;
 
 }
+
+/** ===================== LOGIN FORM ==================== **/
+
+
+/* LOGIN TEXT */
+#login {
+	position: absolute;
+	float: left;
+	margin-top: 5px;
+	left: 1300px;
+	padding-left: 130px;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 0px 2px 3px #555;
+
+}
+
+
+#login #login_button {
+	 	width: 100px;
+    margin-top: 10px;
+    padding: 6px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 400;
+    text-align: center;
+    background: rgba(255,255,255, 0);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    display: table;
+    position: static;
+    clear: both;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* LOG OUT BUTTON */
+#endhover img {
+	position: left;
+	margin-right: 30px;
+	float: right;
+	height: 150px;
+
+}
+
+
+
+
+
+/** ===================== NEW USER FORM ==================== **/
 
 #userform {
-	background:rgba(255,255,255, 0.8);
+	background:rgba(255,255,255, 1);
 	width: 50%;
 	display: inline-block;
-	text-align: center;
-	margin-top: 20px;
-	margin-bottom:20px;
-	border: 2px solid #FF7F50;
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom:10px;
+	border: 4px solid #43b3e0;
 	border-radius: 20px;
-	padding: 10px;
+	padding: 20px;
+	box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+
 }
+
+
+/****  READY SET GO! FONT FORMAT ****/
+#userform h1{
+	font-size: 35px;
+
+}
+
+/****  SIGN UP TO START MAKING PERSONAL GiFS ****/
+#userform h2{
+	font-size: 13px;
+
+}
+
+
+/**** JOIN GIF ME ****/
+#userform #submit {
+		font-family: 'Press Start 2P', cursive;
+	  color: #5ec6f0;
+   	background: #fff;
+		font-size: 13px;
+   	text-align: center;
+    width: 30%;
+    margin-top: 10px;
+    padding: 12px;
+    letter-spacing: -1px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 3px solid #5ec6f0;
+    display: table;
+    position: static;
+    clear: both;
+    
+}
+
+/* LABELS FOR NEW USER FORM */
+#userform .input label {
+    color: #5ec6f0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    display: block;
+    font-family: 'Ubuntu Mono', cursive;
+    
+}
+
+#userform input[type="text"] {
+    width: 40%;
+}
+
+/** ===================== USER INFO PAGE ==================== **/
 
 #userinfo {
 	float: right;
@@ -172,11 +322,18 @@ p {
 	margin-bottom:20px;
 	border: 2px solid #FF7F50;
 	border-radius: 20px;
+
+
 }
 
 .uinfoname {
-	font-family: 'Rokkitt', serif;
+	font-family: 'Press Start 2P', cursive;
 }
+
+.uinfoedit {
+	font-family: 'Press Start 2P', cursive;
+}
+
 
 #uinfophoto {
 	width: 100%;
@@ -196,6 +353,7 @@ p {
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom:20px;
+
 }
 
 #gifsindex {
@@ -266,45 +424,91 @@ p {
 	width: 100%;
 	text-align: center;
 	margin-top: 20px;
-	margin-bottom:20px;
+	margin-bottom: 0px;
 }
+
+
+
+/** ===================== USER SHOW PAGE ==================== **/
+
+/*BOX OF USERS EACH ONE*/
 
 #userindexshow {
 	display: inline-block;
-	float: left;
-	background:rgba(255,255,255, 0.8);
-	width: 22%;
-	height: 400px;
+	float: justify;
+	background:rgba(255,255,255, 1);
+	width: 20%;
+	height: 25%;
 	text-align: center;
-	margin: 20px 10px;
-	border: 2px solid #FF7F50;
+	margin: 50px;
+	border: 3px solid #000000;
 	border-radius: 20px;
+	padding-bottom: 10px;
+	box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
 }
 
-#userindex img {
-	border-radius: 20px;
-	width: 100%;
+/* FONTS FOR EACH BOXED USER*/
+#userindexshow h2 {
+	font-family: 'Ubuntu Mono', cursive;
+	font-size: 20px;
+	font-weight: bold;
 }
+
+#userindexshow h3 {
+	font-family: 'Ubuntu Mono', cursive;
+	font-size: 15px;
+}
+
+
+/* USER PICTURE IN INDEX USER PAGE*/
+.userindexphoto {
+	height: 200px;
+	width: 150px;
+	margin-left: 110px;
+	display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+}
+
+
+/** ===================== GIF INDEX PAGE ==================== **/
+
 
 #gifindex {
 	display: inline-block;
-	float: left;
-	background:rgba(255,255,255, 0.8);
-	width: 45%;
-	height: 350px;
+	float: justify;
+	background:rgba(255,255,255, 1);
+	width: 30%;
+	height: 25%;
 	text-align: center;
-	margin: 20px 10px;
-	border: 2px solid #FF7F50;
+	margin: 50px;
+	border: 3px solid #000000;
 	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
-.logout:hover {
+.gifall
+{
+	color: #43b3e0;
+	font-family: 'Ubuntu Mono', cursive;
+}
+/*.logout:hover {
 	background-image: url('http://i.imgur.com/ucNVzIp.png');
 
-}
+}*/
 
-.sitename {
-	width: 20%;
-}
+
+
 
 
